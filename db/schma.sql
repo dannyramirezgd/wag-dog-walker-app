@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS wag_db;
+
+CREATE DATABASE wag_db;
