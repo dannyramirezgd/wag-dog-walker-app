@@ -2,7 +2,7 @@ const router = require('express').Router();
 const { Dog, Walker, Owner } = require('../../models');
 
 // GET /api/walkers all the walkers information.
-router.get('/', async (res, req) => {
+router.get('/', async (req, res) => {
   try {
     const allWalkerData = await Walker.findAll({
       include: [
