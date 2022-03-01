@@ -1,6 +1,16 @@
-//three tables
-//dogs owners walkers
+const express = require('express');
+const routes = require('./controllers');
+const sequelize = require('./config/connection');
 
-//two kind of profiles one for walkers and one for owners
+const app = express();
+const PORT = process.env.PORT || 3001;
 
-//match-matching service for dog owners and dog walkers
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.use(routes);
+
+// sync sequelize models to the database, then turn on the server
+sequelize.sync({ force: false }).then(() => {
+  app.listen(PORT, () => console.log('Now listening'));
+});

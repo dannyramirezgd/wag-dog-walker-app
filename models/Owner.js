@@ -1,59 +1,68 @@
-const { Model, DataTypes } = require('sequelize')
-const sequelize = require('../config/connection')
+const { Model, DataTypes } = require('sequelize');
+const sequelize = require('../config/connection');
 
 class Owner extends Model {}
 
 Owner.init(
-    {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            autoIncrement: true,
-        },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                isEmail: true,
-            },
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [4],
-            },
-        },
-        address: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
+  {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
     },
-    {
-        hooks: {
-            async beforeCreate(newOwnerData) {
-                newOwnerData.password = await bcrypt.hash(
-                    newOwnerData.password,
-                    10
-                )
-                return newUserData
-            },
-            async beforeUpdate(updatedOwnerData) {
-                updatedOwnerData.password = await bcrypt.hash(
-                    updatedOwnerData.password,
-                    10
-                )
-                return updatedOwnerData
-            },
-        },
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'owner',
-    }
-)
+    owner_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1],
+      },
+    },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [4],
+      },
+    },
+    user_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        len: [4],
+      },
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [4],
+      },
+    },
+    phone: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [10, 10],
+      },
+    },
+  },
+  {
+    sequelize,
+    timestamps: false,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'owner',
+  },
+);
+
+module.exports = Owner;
