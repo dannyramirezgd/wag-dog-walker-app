@@ -18,13 +18,54 @@ Owner.init(
         len: [1],
       },
     },
+    password: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [4],
+      },
+    },
+    user_name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        len: [4],
+      },
+    },
+    email: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: true,
+      validate: {
+        isEmail: true,
+      },
+    },
+    address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [4],
+      },
+    },
+    phone: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        len: [10, 10],
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+<<<<<<< HEAD
     modelName: 'category',
+=======
+    modelName: 'owner',
+>>>>>>> 4d812e90228dde77157ccc61c98cba4ba00ec2be
   },
 );
 

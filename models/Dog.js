@@ -23,13 +23,31 @@ Dog.init(
       allowNull: false,
       isDecimal: true,
     },
+    owner_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'owner',
+        key: 'id',
+      },
+    },
+    walker_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'walker',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
+<<<<<<< HEAD
     modelName: 'category',
+=======
+    modelName: 'dog',
+>>>>>>> 4d812e90228dde77157ccc61c98cba4ba00ec2be
   },
 );
 
