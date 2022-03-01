@@ -19,7 +19,7 @@ Dog.init(
             }
         },
         size: {
-            type: DataTypes.STRING(5),
+            type: DataTypes.STRING,
             allowNull: false,
             isDecimal: true
         }
