@@ -79,8 +79,9 @@ Will look into bcrypt documentation for how to make seed password testable.*/
 router.post('/login', async (req, res) => {
   try {
     const ownerUserNameData = await Owner.findOne({
-      where: { user_name: req.body.user_name },
+      where: { email: req.body.email },
     });
+    console.log(ownerUserNameData);
     if (!ownerUserNameData) {
       res.status(400).json({ message: 'No dog owner with that username!' });
       return;
@@ -91,9 +92,14 @@ router.post('/login', async (req, res) => {
       res.status(400).json({ message: 'Invalid password. Try again' });
       return;
     }
-    res.json({
-      user: ownerUserNameData,
-      message: `${ownerUserNameData.owner_name}, you are now logged in!`,
+    req.session.save(() => {
+      req.session.user_id = ownerUserNameData.id;
+      req.session.username = ownerUserNameData.username;
+      req.session.ownerLogin = true;
+      res.json({
+        user: ownerUserNameData,
+        message: `${ownerUserNameData.owner_name}, you are now logged in!`,
+      });
     });
   } catch (err) {
     console.log(err);

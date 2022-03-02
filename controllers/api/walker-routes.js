@@ -90,9 +90,14 @@ router.post('/login', async (req, res) => {
       res.status(400).json({ message: 'Invalid password. Try again' });
       return;
     }
-    res.json({
-      user: walkerUserNameData,
-      message: `${walkerUserNameData.walker_name}, you are now logged in!`,
+    req.session.save(() => {
+      req.session.user_id = walkerUserNameData.id;
+      req.session.username = walkerUserNameData.username;
+      req.session.walkerLogin = true;
+      res.json({
+        user: walkerUserNameData,
+        message: `${walkerUserNameData.owner_name}, you are now logged in!`,
+      });
     });
   } catch (err) {
     console.log(err);
