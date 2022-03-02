@@ -74,7 +74,32 @@ router.post('/', async (req, res) => {
   }
 });
 
-// POST api/owners/login route requires.
+/* POST api/owners/login route. looking for username and password in the db and verify it. Test: doesn't hash seed data password. only works on new user that had been created.
+Will look into bcrypt documentation for how to make seed password testable.*/
+router.post('/login', async (req, res) => {
+  try {
+    const ownerUserNameData = await Owner.findOne({
+      where: { user_name: req.body.user_name },
+    });
+    if (!ownerUserNameData) {
+      res.status(400).json({ message: 'No dog owner with that username!' });
+      return;
+    }
+    // verify the user using checkPassword method defined in Owner model.
+    const validPassword = ownerUserNameData.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: 'Invalid password. Try again' });
+      return;
+    }
+    res.json({
+      user: ownerUserNameData,
+      message: `${ownerUserNameData.owner_name}, you are now logged in!`,
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // PUT api/owners/:id updating a owner's info based on its id.
 router.put('/:id', async (req, res) => {
