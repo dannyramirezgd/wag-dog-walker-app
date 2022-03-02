@@ -22,8 +22,8 @@ router.get('/dashboard/:id', async (req, res) => {
         },
       ],
     });
-    const dashboard = singleOwnerData.get({ plain: true });
-    res.render('owner-dashboard', { dashboard, ownerLogin: true });
+    const owner = singleOwnerData.get({ plain: true });
+    res.render('owner-dashboard', { owner, ownerLogin: true });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

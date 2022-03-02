@@ -5,17 +5,21 @@
         <ul>
             Owner Info
             <li>
-                {{owner_name}}
+                {{owner.owner_name}}
             </li>
             <li>
-                {{email}}
+                {{owner.email}}
             </li>
             <li>
-                {{address}}
+                {{owner.address}}
             </li>
             <li>
-                {{phone}}
+                {{owner.phone}}
             </li>
         </ul>
+    </div>
+    <div>
+        dogs
+        {{> dog-info owner.dogs}}
     </div>
 </section>
