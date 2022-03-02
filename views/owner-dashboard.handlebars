@@ -1,0 +1,25 @@
+<section>
+    <img src=""/>
+    profile picture
+    <div>
+        <ul>
+            Owner Info
+            <li>
+                {{owner.owner_name}}
+            </li>
+            <li>
+                {{owner.email}}
+            </li>
+            <li>
+                {{owner.address}}
+            </li>
+            <li>
+                {{owner.phone}}
+            </li>
+        </ul>
+    </div>
+    <div>
+        dogs
+        {{> dog-info owner.dogs}}
+    </div>
+</section>
