@@ -43,11 +43,7 @@ Dog.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-<<<<<<< HEAD
-    modelName: 'category',
-=======
     modelName: 'dog',
->>>>>>> 4d812e90228dde77157ccc61c98cba4ba00ec2be
   },
 );
 

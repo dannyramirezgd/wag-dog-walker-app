@@ -7,10 +7,19 @@ router.get('/', async (req, res) => {
     const allWalkerData = await Walker.findAll({
       include: [
         {
-          model: Owner,
-          attribute: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Owner,
+            attributes: [
+              'owner_name',
+              'user_name',
+              'email',
+              'address',
+              'phone',
+            ],
+          },
         },
-        Dog,
       ],
     });
     // responding in json format.
@@ -28,10 +37,19 @@ router.get('/:id', async (req, res) => {
       where: { id: req.params.id },
       include: [
         {
-          model: Owner,
-          attributes: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Owner,
+            attributes: [
+              'owner_name',
+              'user_name',
+              'email',
+              'address',
+              'phone',
+            ],
+          },
         },
-        Dog,
       ],
     });
     if (!singleWalkerData) {

@@ -1,7 +1,12 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcrypt');
 
-class Owner extends Model {}
+class Owner extends Model {
+  checkPassword(loginPw) {
+    return bcrypt.compareSync(loginPw, this.password);
+}
+}
 
 Owner.init(
   {
@@ -57,15 +62,24 @@ Owner.init(
     },
   },
   {
+    hooks: {
+      async beforeCreate(newUserData) {
+        newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        return newUserData;
+      },
+      async beforeUpdate(updatedUserData) {
+        updatedUserData.password = await bcrypt.hash(
+          updatedUserData.password,
+          10,
+        );
+        return updatedUserData;
+      },
+    },
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-<<<<<<< HEAD
-    modelName: 'category',
-=======
     modelName: 'owner',
->>>>>>> 4d812e90228dde77157ccc61c98cba4ba00ec2be
   },
 );
 

@@ -6,10 +6,19 @@ router.get('/', async (req, res) => {
   try {
     const allOwnerData = await Owner.findAll({
       include: [
-        Dog,
         {
-          model: Walker,
-          attribute: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Walker,
+            attributes: [
+              'walker_name',
+              'user_name',
+              'email',
+              'phone',
+              'hourly_rate',
+            ],
+          },
         },
       ],
     });
@@ -27,10 +36,19 @@ router.get('/:id', async (req, res) => {
     const singleOwnerData = await Owner.findOne({
       where: { id: req.params.id },
       include: [
-        Dog,
         {
-          model: Walker,
-          attributes: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Walker,
+            attributes: [
+              'walker_name',
+              'user_name',
+              'email',
+              'phone',
+              'hourly_rate',
+            ],
+          },
         },
       ],
     });
