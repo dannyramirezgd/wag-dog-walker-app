@@ -7,10 +7,19 @@ router.get('/', async (req, res) => {
     const allWalkerData = await Walker.findAll({
       include: [
         {
-          model: Owner,
-          attribute: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Owner,
+            attributes: [
+              'owner_name',
+              'user_name',
+              'email',
+              'address',
+              'phone',
+            ],
+          },
         },
-        Dog,
       ],
     });
     // responding in json format.
@@ -28,10 +37,19 @@ router.get('/:id', async (req, res) => {
       where: { id: req.params.id },
       include: [
         {
-          model: Owner,
-          attributes: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Owner,
+            attributes: [
+              'owner_name',
+              'user_name',
+              'email',
+              'address',
+              'phone',
+            ],
+          },
         },
-        Dog,
       ],
     });
     if (!singleWalkerData) {
@@ -56,7 +74,36 @@ router.post('/', async (req, res) => {
   }
 });
 
-// POST api/walkers/login route requires.
+// POST api/walkers/login route. looking for username and password in the db and verify it. current constraint explained in owner-routes.js.
+router.post('/login', async (req, res) => {
+  try {
+    const walkerUserNameData = await Owner.findOne({
+      where: { user_name: req.body.user_name },
+    });
+    if (!walkerUserNameData) {
+      res.status(400).json({ message: 'No dog walker with that username!' });
+      return;
+    }
+    // verify the user using checkPassword method defined in Owner model.
+    const validPassword = walkerUserNameData.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: 'Invalid password. Try again' });
+      return;
+    }
+    req.session.save(() => {
+      req.session.user_id = walkerUserNameData.id;
+      req.session.username = walkerUserNameData.username;
+      req.session.walkerLogin = true;
+      res.json({
+        user: walkerUserNameData,
+        message: `${walkerUserNameData.owner_name}, you are now logged in!`,
+      });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
 
 // PUT api/walkers/:id updating a walker's info based on its id.
 router.put('/:id', async (req, res) => {

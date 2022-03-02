@@ -14,19 +14,23 @@
     <h1>Wag: Connecting Dogs and Walkers</h1>
   </header>
   <nav>
-    <a href="/">Home</a>
-    {{#if loggedIn}}
+    <a href="/about-us">About Us</a>
+    <a href="/walker-signup">Become a Walker</a>
+    <a href="/contact-us">Contact Us</a>
+    {{#if ownerLogin}}
     <button id="logout" class="btn-no-style">Logout</button>
     {{else}}
     <a href="/login">Login</a>
     {{/if}}
   </nav>
   <main>
-
+ {{{body}}}
   </main>
-  {{#if loggedIn}}
+  {{#if ownerLogin}}
   <script src="/js/logout.js"></script>
   {{/if}}
 </body>
-
+<footer>
+  &copy; 2022 TeamWag Inc. All rights reserved.
+</footer>
 </html>
