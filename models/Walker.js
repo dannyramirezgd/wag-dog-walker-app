@@ -64,16 +64,6 @@ Walker.init(
             allowNull: true,
         },
     },
-<<<<<<< HEAD
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'walker',
-    }
-)
-=======
     walker_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -143,6 +133,5 @@ Walker.init(
     modelName: 'walker',
   },
 );
->>>>>>> fcb97d279818550d264275ea5f63c91a65d9f6bf
 
 module.exports = Walker

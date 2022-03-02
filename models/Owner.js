@@ -61,16 +61,6 @@ Owner.init(
             },
         },
     },
-<<<<<<< HEAD
-    {
-        sequelize,
-        timestamps: false,
-        freezeTableName: true,
-        underscored: true,
-        modelName: 'owner',
-    }
-)
-=======
     owner_name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -137,6 +127,5 @@ Owner.init(
     modelName: 'owner',
   },
 );
->>>>>>> fcb97d279818550d264275ea5f63c91a65d9f6bf
 
 module.exports = Owner
