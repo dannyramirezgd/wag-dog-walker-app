@@ -65,14 +65,14 @@ router.post('/', async (req, res) => {
 // POST api/walkers/login route. looking for username and password in the db and verify it. current constraint explained in owner-routes.js.
 router.post('/login', async (req, res) => {
   try {
-    const walkerUserNameData = await Owner.findOne({
+    const walkerUserNameData = await Walker.findOne({
       where: { email: req.body.email },
     });
     if (!walkerUserNameData) {
       res.status(400).json({ message: 'No dog walker with that email!' });
       return;
     }
-    // verify the user using checkPassword method defined in Owner model.
+    // verify the user using checkPassword method defined in Walker model.
     const validPassword = walkerUserNameData.checkPassword(req.body.password);
     if (!validPassword) {
       res.status(400).json({ message: 'Invalid password. Try again' });
@@ -80,11 +80,12 @@ router.post('/login', async (req, res) => {
     }
     req.session.save(() => {
       req.session.user_id = walkerUserNameData.id;
-      req.session.username = walkerUserNameData.username;
       req.session.walkerLogin = true;
+      req.session.loggedIn = true;
+      console.log(req.session);
       res.json({
         user: walkerUserNameData,
-        message: `${walkerUserNameData.owner_name}, you are now logged in!`,
+        message: `${walkerUserNameData.walker_name}, you are now logged in!`,
       });
     });
   } catch (err) {
