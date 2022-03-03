@@ -1,6 +1,7 @@
 const Dog = require('./Dog');
 const Owner = require('./Owner');
 const Walker = require('./Walker');
+const Calendar = require('./Calendar');
 
 Owner.hasMany(Dog, {
   foreignKey: 'owner_id',
@@ -11,12 +12,21 @@ Dog.belongsTo(Owner, {
   onDelete: 'CASCADE',
 });
 
-Dog.belongsTo(Walker, {
-  foreignKey: 'walker_id',
+Dog.belongsToMany(Calendar, {
+  foreignKey: 'dog_id',
   onDelete: 'SET NULL',
 });
 
-Walker.hasMany(Dog, {
+Walker.belongsTo(Calendar, {
+  foreignKey: 'walker_id',
+  onDelete: 'CASCADE',
+});
+
+Calendar.hasMany(Dog, {
+  foreignKey: 'dog_id',
+});
+
+Calendar.hasMany(Walker, {
   foreignKey: 'walker_id',
 });
 

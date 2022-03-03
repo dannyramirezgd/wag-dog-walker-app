@@ -54,10 +54,10 @@ Owner.init(
       },
     },
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [10, 11],
+        len: [10, 10],
       },
     },
   },
