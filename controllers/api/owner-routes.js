@@ -79,8 +79,8 @@ router.post('/login', async (req, res) => {
     }
     req.session.save(() => {
       req.session.user_id = ownerUserNameData.id;
-      req.session.username = ownerUserNameData.username;
-      req.session.ownerLogin = true;
+      req.session.loggedIn = true;
+      req.session.walkerLogin = false;
       res.json({
         user: ownerUserNameData,
         message: `${ownerUserNameData.owner_name}, you are now logged in!`,
@@ -93,7 +93,7 @@ router.post('/login', async (req, res) => {
 });
 
 router.post('/logout', (req, res) => {
-  if (req.session.ownerLogin) {
+  if (req.session.loggedIn) {
     req.session.destroy(() => {
       res.status(204).end();
     });
