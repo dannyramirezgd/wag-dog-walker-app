@@ -34,4 +34,5 @@ module.exports = {
   Dog,
   Owner,
   Walker,
+  Calendar,
 };

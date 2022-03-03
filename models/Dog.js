@@ -29,6 +29,13 @@ Dog.init(
         key: 'id',
       },
     },
+    calendar_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'calendar',
+        key: 'id',
+      },
+    },
   },
   {
     sequelize,

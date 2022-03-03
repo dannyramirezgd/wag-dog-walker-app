@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dog, Walker, Owner } = require('../../models');
+const { Dog, Walker, Owner, Calendar } = require('../../models');
 
 // GET /api/walkers all the walkers information.
 router.get('/', async (req, res) => {
@@ -7,17 +7,21 @@ router.get('/', async (req, res) => {
     const allWalkerData = await Walker.findAll({
       include: [
         {
-          model: Dog,
-          attributes: ['dog_name'],
+          model: Calendar,
+          attributes: ['day', 'time'],
           include: {
-            model: Owner,
-            attributes: [
-              'owner_name',
-              'user_name',
-              'email',
-              'address',
-              'phone',
-            ],
+            model: Dog,
+            attributes: ['dog_name'],
+            include: {
+              model: Owner,
+              attributes: [
+                'owner_name',
+                'user_name',
+                'email',
+                'address',
+                'phone',
+              ],
+            },
           },
         },
       ],
@@ -37,17 +41,21 @@ router.get('/:id', async (req, res) => {
       where: { id: req.params.id },
       include: [
         {
-          model: Dog,
-          attributes: ['dog_name'],
+          model: Calendar,
+          attributes: ['day', 'time'],
           include: {
-            model: Owner,
-            attributes: [
-              'owner_name',
-              'user_name',
-              'email',
-              'address',
-              'phone',
-            ],
+            model: Dog,
+            attributes: ['dog_name'],
+            include: {
+              model: Owner,
+              attributes: [
+                'owner_name',
+                'user_name',
+                'email',
+                'address',
+                'phone',
+              ],
+            },
           },
         },
       ],
