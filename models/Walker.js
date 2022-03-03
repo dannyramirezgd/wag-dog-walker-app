@@ -30,14 +30,6 @@ Walker.init(
         len: [4],
       },
     },
-    user_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        len: [4],
-      },
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,

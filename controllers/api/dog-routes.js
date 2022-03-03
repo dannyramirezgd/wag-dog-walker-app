@@ -8,7 +8,7 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Owner,
-          attributes: ['owner_name', 'user_name', 'email', 'address', 'phone'],
+          attributes: ['owner_name', 'email', 'address', 'phone'],
         },
         {
           model: Calendar,
@@ -36,7 +36,7 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: Owner,
-          attributes: ['owner_name', 'user_name', 'email', 'address', 'phone'],
+          attributes: ['owner_name', 'email', 'address', 'phone'],
         },
         {
           model: Calendar,
