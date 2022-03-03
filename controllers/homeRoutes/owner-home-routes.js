@@ -23,7 +23,7 @@ router.get('/dashboard/:id', async (req, res) => {
       ],
     });
     const owner = singleOwnerData.get({ plain: true });
-    res.render('owner-dashboard', { owner, ownerLogin: true });
+    res.render('owner-dashboard', { owner, loggedIn: true });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);

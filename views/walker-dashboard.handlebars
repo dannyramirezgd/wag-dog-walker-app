@@ -1,0 +1,28 @@
+<section>
+    <img src=""/>
+    profile picture
+    <div>
+        <ul>
+            Walker Info
+            <li>
+                {{walker.walker_name}}
+            </li>
+            <li>
+                {{walker.email}}
+            </li>
+            <li>
+                {{walker.times_available}}
+            </li>
+            <li>
+                {{walker.hourly_rate}}
+            </li>
+            <li>
+                {{walker.phone}}
+            </li>
+        </ul>
+    </div>
+    <div>
+        dogs
+        {{> dog-info walker.dogs}}
+    </div>
+</section>
