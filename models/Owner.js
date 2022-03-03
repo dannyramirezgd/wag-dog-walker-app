@@ -53,7 +53,7 @@ Owner.init(
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        len: [10, 10],
+        len: [10, 11],
       },
     },
   },
