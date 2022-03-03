@@ -34,7 +34,7 @@ async function signupFormHandler(event) {
       const data = await response.json();
       setTimeout(() => {
         document.location.replace(`/walker/dashboard/${data.id}`);
-      }, 1000);
+      }, 500);
     } else {
       alert(response.statusText);
     }

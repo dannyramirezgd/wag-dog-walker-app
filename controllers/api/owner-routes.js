@@ -80,6 +80,7 @@ router.post('/login', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = ownerUserNameData.id;
       req.session.loggedIn = true;
+      req.session.walkerLogin = false;
       res.json({
         user: ownerUserNameData,
         message: `${ownerUserNameData.owner_name}, you are now logged in!`,
