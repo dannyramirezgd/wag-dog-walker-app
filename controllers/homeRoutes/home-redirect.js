@@ -5,7 +5,7 @@ router.get('/', (req, res) => {
     res.redirect(`/walker/dashboard/${req.session.user_id}`);
     return;
   } else if (req.session.loggedIn) {
-    res.redirect(`/walker/dashboard/${req.session.user_id}`);
+    res.redirect(`/owner/dashboard/${req.session.user_id}`);
     return;
   } else {
     res.redirect('/login');
