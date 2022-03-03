@@ -6,10 +6,19 @@ router.get('/', async (req, res) => {
   try {
     const allOwnerData = await Owner.findAll({
       include: [
-        Dog,
         {
-          model: Walker,
-          attribute: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Walker,
+            attributes: [
+              'walker_name',
+              'user_name',
+              'email',
+              'phone',
+              'hourly_rate',
+            ],
+          },
         },
       ],
     });
@@ -27,10 +36,19 @@ router.get('/:id', async (req, res) => {
     const singleOwnerData = await Owner.findOne({
       where: { id: req.params.id },
       include: [
-        Dog,
         {
-          model: Walker,
-          attributes: { exclude: ['password'] },
+          model: Dog,
+          attributes: ['dog_name'],
+          include: {
+            model: Walker,
+            attributes: [
+              'walker_name',
+              'user_name',
+              'email',
+              'phone',
+              'hourly_rate',
+            ],
+          },
         },
       ],
     });
@@ -56,7 +74,48 @@ router.post('/', async (req, res) => {
   }
 });
 
-// POST api/owners/login route requires.
+/* POST api/owners/login route. looking for username and password in the db and verify it. Test: doesn't hash seed data password. only works on new user that had been created.
+Will look into bcrypt documentation for how to make seed password testable.*/
+router.post('/login', async (req, res) => {
+  try {
+    const ownerUserNameData = await Owner.findOne({
+      where: { email: req.body.email },
+    });
+    console.log(ownerUserNameData);
+    if (!ownerUserNameData) {
+      res.status(400).json({ message: 'No dog owner with that username!' });
+      return;
+    }
+    // verify the user using checkPassword method defined in Owner model.
+    const validPassword = ownerUserNameData.checkPassword(req.body.password);
+    if (!validPassword) {
+      res.status(400).json({ message: 'Invalid password. Try again' });
+      return;
+    }
+    req.session.save(() => {
+      req.session.user_id = ownerUserNameData.id;
+      req.session.username = ownerUserNameData.username;
+      req.session.ownerLogin = true;
+      res.json({
+        user: ownerUserNameData,
+        message: `${ownerUserNameData.owner_name}, you are now logged in!`,
+      });
+    });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+router.post('/logout', (req, res) => {
+  if (req.session.ownerLogin) {
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+});
 
 // PUT api/owners/:id updating a owner's info based on its id.
 router.put('/:id', async (req, res) => {
