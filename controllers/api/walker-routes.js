@@ -11,13 +11,7 @@ router.get('/', async (req, res) => {
           attributes: ['dog_name'],
           include: {
             model: Owner,
-            attributes: [
-              'owner_name',
-              'user_name',
-              'email',
-              'address',
-              'phone',
-            ],
+            attributes: ['owner_name', 'email', 'address', 'phone'],
           },
         },
       ],
@@ -41,13 +35,7 @@ router.get('/:id', async (req, res) => {
           attributes: ['dog_name'],
           include: {
             model: Owner,
-            attributes: [
-              'owner_name',
-              'user_name',
-              'email',
-              'address',
-              'phone',
-            ],
+            attributes: ['owner_name', 'email', 'address', 'phone'],
           },
         },
       ],
@@ -78,10 +66,10 @@ router.post('/', async (req, res) => {
 router.post('/login', async (req, res) => {
   try {
     const walkerUserNameData = await Owner.findOne({
-      where: { user_name: req.body.user_name },
+      where: { email: req.body.email },
     });
     if (!walkerUserNameData) {
-      res.status(400).json({ message: 'No dog walker with that username!' });
+      res.status(400).json({ message: 'No dog walker with that email!' });
       return;
     }
     // verify the user using checkPassword method defined in Owner model.

@@ -8,17 +8,11 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Owner,
-          attributes: ['owner_name', 'user_name', 'email', 'address', 'phone'],
+          attributes: ['owner_name', 'email', 'address', 'phone'],
         },
         {
           model: Walker,
-          attributes: [
-            'walker_name',
-            'user_name',
-            'email',
-            'phone',
-            'hourly_rate',
-          ],
+          attributes: ['walker_name', 'email', 'phone', 'hourly_rate'],
         },
       ],
     });
@@ -38,17 +32,11 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: Owner,
-          attributes: ['owner_name', 'user_name', 'email', 'address', 'phone'],
+          attributes: ['owner_name', 'email', 'address', 'phone'],
         },
         {
           model: Walker,
-          attributes: [
-            'walker_name',
-            'user_name',
-            'email',
-            'phone',
-            'hourly_rate',
-          ],
+          attributes: ['walker_name', 'email', 'phone', 'hourly_rate'],
         },
       ],
     });
