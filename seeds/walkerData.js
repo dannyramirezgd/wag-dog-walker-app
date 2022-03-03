@@ -4,7 +4,6 @@ const walkerData = [
   {
     walker_name: 'Justin',
     password: '34iVB#',
-    user_name: 'JustinWalker',
     email: 'justinwalker@gmail.com',
     phone: '9890093884',
     hourly_rate: '20.00',
@@ -13,7 +12,6 @@ const walkerData = [
   {
     walker_name: 'Hailey',
     password: '9024io4#',
-    user_name: 'CptWalker',
     email: 'cptwalker@gmail.com',
     phone: '8378409229',
     hourly_rate: '15.00',
