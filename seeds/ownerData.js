@@ -7,7 +7,7 @@ const ownerData = [
     user_name: 'chris_rock',
     email: 'chrisRock@gmail.com',
     address: '21 Jump St. Arlington, VA',
-    phone: '123456789',
+    phone: '1234560789',
   },
   {
     owner_name: 'Danny',
@@ -15,7 +15,7 @@ const ownerData = [
     user_name: 'dannyMan',
     email: 'dannyR@gmail.com',
     address: '18 Heroku Error Ct. Fairfax, VA',
-    phone: '098765432',
+    phone: '0987605432',
   },
   {
     owner_name: 'DK',
@@ -23,7 +23,7 @@ const ownerData = [
     user_name: 'TipsyDK',
     email: 'tipsydk@gmail.com',
     address: '13 Alcohol Ct. Centreville, VA',
-    phone: '890289203',
+    phone: '8902890203',
   },
   {
     owner_name: 'Alex',
@@ -31,7 +31,7 @@ const ownerData = [
     user_name: 'longHairAlex',
     email: 'longhairAlex@gmail.com',
     address: '90 Vidal Salon St. Alexandria, VA',
-    phone: '975943094',
+    phone: '9759403094',
   },
   {
     owner_name: 'Ethan',
@@ -39,7 +39,7 @@ const ownerData = [
     user_name: 'CatMan',
     email: 'catMan@gmail.com',
     address: '27 litter box St. Chantilly, VA',
-    phone: '934802933',
+    phone: '9348002933',
   },
 ];
 
