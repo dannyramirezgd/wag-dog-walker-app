@@ -13,13 +13,19 @@ Dog.belongsTo(Owner, {
 });
 
 Dog.belongsToMany(Walker, {
-  through: Calendar,
+  through: {
+    model: Calendar,
+    unique: false,
+  },
   foreignKey: 'dog_id',
   onDelete: 'SET NULL',
 });
 
 Walker.belongsToMany(Dog, {
-  through: Calendar,
+  through: {
+    model: Calendar,
+    unique: false,
+  },
   foreignKey: 'walker_id',
   onDelete: 'CASCADE',
 });

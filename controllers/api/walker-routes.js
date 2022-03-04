@@ -1,31 +1,10 @@
 const router = require('express').Router();
-const { Dog, Walker, Owner, Calendar } = require('../../models');
+const { Walker } = require('../../models');
 
 // GET /api/walkers all the walkers information.
 router.get('/', async (req, res) => {
   try {
-    const allWalkerData = await Walker.findAll({
-      include: [
-        {
-          model: Calendar,
-          attributes: ['day', 'time'],
-          include: {
-            model: Dog,
-            attributes: ['dog_name'],
-            include: {
-              model: Owner,
-              attributes: [
-                'owner_name',
-                'user_name',
-                'email',
-                'address',
-                'phone',
-              ],
-            },
-          },
-        },
-      ],
-    });
+    const allWalkerData = await Walker.findAll();
     // responding in json format.
     res.json(allWalkerData);
   } catch (err) {
@@ -39,26 +18,6 @@ router.get('/:id', async (req, res) => {
   try {
     const singleWalkerData = await Walker.findOne({
       where: { id: req.params.id },
-      include: [
-        {
-          model: Calendar,
-          attributes: ['day', 'time'],
-          include: {
-            model: Dog,
-            attributes: ['dog_name'],
-            include: {
-              model: Owner,
-              attributes: [
-                'owner_name',
-                'user_name',
-                'email',
-                'address',
-                'phone',
-              ],
-            },
-          },
-        },
-      ],
     });
     if (!singleWalkerData) {
       res.status(404).json({ message: 'No dog walker found with this id.' });
