@@ -1,6 +1,7 @@
 const seedDog = require('./dogData');
 const seedOwners = require('./ownerData');
 const seedWalkers = require('./walkerData');
+const seedCalendars = require('./calendarData');
 
 const sequelize = require('../config/connection');
 
@@ -15,6 +16,9 @@ const seedAll = async () => {
 
   await seedDog();
   console.log('\n----- DOGS DATA SEEDED -----\n');
+
+  await seedCalendars();
+  console.log('\n----- CAlENDAR DATA SEEDED -----\n');
 
   process.exit(0);
 };

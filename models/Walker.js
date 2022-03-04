@@ -50,14 +50,6 @@ Walker.init(
       allowNull: false,
       isDecimal: true,
     },
-    //converting times to a string that will be parsed: "MOm => Monday morning", "TUe => Tuesday Evening"
-    calendar_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'calendar',
-        key: 'id',
-      },
-    },
   },
   {
     hooks: {
