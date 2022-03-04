@@ -12,7 +12,7 @@ async function signupFormHandler(event) {
     passwordInput &&
     nameInput &&
     hourlyRateInput &&
-    phoneInput &&
+    phoneInput
   ) {
     const response = await fetch('/api/walkers', {
       method: 'post',
