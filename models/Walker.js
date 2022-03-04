@@ -50,7 +50,6 @@ Walker.init(
       allowNull: false,
       isDecimal: true,
     },
-    //converting times to a string that will be parsed: "MOm => Monday morning", "TUe => Tuesday Evening"
   },
   {
     hooks: {
