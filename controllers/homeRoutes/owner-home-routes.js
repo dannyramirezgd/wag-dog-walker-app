@@ -11,13 +11,7 @@ router.get('/dashboard/:id', async (req, res) => {
           attributes: ['dog_name', 'size'],
           include: {
             model: Walker,
-            attributes: [
-              'walker_name',
-              'email',
-              'phone',
-              'hourly_rate',
-              'times_available',
-            ],
+            attributes: ['walker_name', 'email', 'phone', 'hourly_rate'],
           },
         },
       ],

@@ -7,7 +7,6 @@ const walkerData = [
     email: 'justinwalker@gmail.com',
     phone: '9890093884',
     hourly_rate: '20.00',
-    times_available: 'MOmTUmWEmTHmFRm',
   },
   {
     walker_name: 'Hailey',
@@ -15,7 +14,6 @@ const walkerData = [
     email: 'cptwalker@gmail.com',
     phone: '8378409229',
     hourly_rate: '15.00',
-    times_available: 'SAmSUmSUaSUe',
   },
 ];
 

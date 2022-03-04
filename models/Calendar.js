@@ -46,7 +46,7 @@ Calendar.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'Calendar',
+    modelName: 'calendar',
   },
 );
 
