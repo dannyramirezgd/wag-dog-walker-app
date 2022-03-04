@@ -30,14 +30,6 @@ Walker.init(
         len: [4],
       },
     },
-    user_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        len: [4],
-      },
-    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -47,7 +39,7 @@ Walker.init(
       },
     },
     phone: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [10, 10],
@@ -59,9 +51,12 @@ Walker.init(
       isDecimal: true,
     },
     //converting times to a string that will be parsed: "MOm => Monday morning", "TUe => Tuesday Evening"
-    times_available: {
-      type: DataTypes.STRING,
-      allowNull: true,
+    calendar_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'calendar',
+        key: 'id',
+      },
     },
   },
   {

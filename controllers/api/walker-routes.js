@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dog, Walker, Owner } = require('../../models');
+const { Dog, Walker, Owner, Calendar } = require('../../models');
 
 // GET /api/walkers all the walkers information.
 router.get('/', async (req, res) => {
@@ -7,17 +7,21 @@ router.get('/', async (req, res) => {
     const allWalkerData = await Walker.findAll({
       include: [
         {
-          model: Dog,
-          attributes: ['dog_name'],
+          model: Calendar,
+          attributes: ['day', 'time'],
           include: {
-            model: Owner,
-            attributes: [
-              'owner_name',
-              'user_name',
-              'email',
-              'address',
-              'phone',
-            ],
+            model: Dog,
+            attributes: ['dog_name'],
+            include: {
+              model: Owner,
+              attributes: [
+                'owner_name',
+                'user_name',
+                'email',
+                'address',
+                'phone',
+              ],
+            },
           },
         },
       ],
@@ -37,17 +41,21 @@ router.get('/:id', async (req, res) => {
       where: { id: req.params.id },
       include: [
         {
-          model: Dog,
-          attributes: ['dog_name'],
+          model: Calendar,
+          attributes: ['day', 'time'],
           include: {
-            model: Owner,
-            attributes: [
-              'owner_name',
-              'user_name',
-              'email',
-              'address',
-              'phone',
-            ],
+            model: Dog,
+            attributes: ['dog_name'],
+            include: {
+              model: Owner,
+              attributes: [
+                'owner_name',
+                'user_name',
+                'email',
+                'address',
+                'phone',
+              ],
+            },
           },
         },
       ],
@@ -77,14 +85,14 @@ router.post('/', async (req, res) => {
 // POST api/walkers/login route. looking for username and password in the db and verify it. current constraint explained in owner-routes.js.
 router.post('/login', async (req, res) => {
   try {
-    const walkerUserNameData = await Owner.findOne({
-      where: { user_name: req.body.user_name },
+    const walkerUserNameData = await Walker.findOne({
+      where: { email: req.body.email },
     });
     if (!walkerUserNameData) {
-      res.status(400).json({ message: 'No dog walker with that username!' });
+      res.status(400).json({ message: 'No dog walker with that email!' });
       return;
     }
-    // verify the user using checkPassword method defined in Owner model.
+    // verify the user using checkPassword method defined in Walker model.
     const validPassword = walkerUserNameData.checkPassword(req.body.password);
     if (!validPassword) {
       res.status(400).json({ message: 'Invalid password. Try again' });
@@ -92,11 +100,12 @@ router.post('/login', async (req, res) => {
     }
     req.session.save(() => {
       req.session.user_id = walkerUserNameData.id;
-      req.session.username = walkerUserNameData.username;
       req.session.walkerLogin = true;
+      req.session.loggedIn = true;
+      console.log(req.session);
       res.json({
         user: walkerUserNameData,
-        message: `${walkerUserNameData.owner_name}, you are now logged in!`,
+        message: `${walkerUserNameData.walker_name}, you are now logged in!`,
       });
     });
   } catch (err) {

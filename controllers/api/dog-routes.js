@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dog, Walker, Owner } = require('../../models');
+const { Dog, Walker, Owner, Calendar } = require('../../models');
 
 // GET /api/dogs all the dogs information.
 router.get('/', async (req, res) => {
@@ -8,17 +8,15 @@ router.get('/', async (req, res) => {
       include: [
         {
           model: Owner,
-          attributes: ['owner_name', 'user_name', 'email', 'address', 'phone'],
+          attributes: ['owner_name', 'email', 'address', 'phone'],
         },
         {
-          model: Walker,
-          attributes: [
-            'walker_name',
-            'user_name',
-            'email',
-            'phone',
-            'hourly_rate',
-          ],
+          model: Calendar,
+          attributes: ['day', 'time'],
+          include: {
+            model: Walker,
+            attributes: ['walker_name', 'email', 'phone'],
+          },
         },
       ],
     });
@@ -38,17 +36,15 @@ router.get('/:id', async (req, res) => {
       include: [
         {
           model: Owner,
-          attributes: ['owner_name', 'user_name', 'email', 'address', 'phone'],
+          attributes: ['owner_name', 'email', 'address', 'phone'],
         },
         {
-          model: Walker,
-          attributes: [
-            'walker_name',
-            'user_name',
-            'email',
-            'phone',
-            'hourly_rate',
-          ],
+          model: Calendar,
+          attributes: ['day', 'time'],
+          include: {
+            model: Walker,
+            attributes: ['walker_name', 'email', 'phone'],
+          },
         },
       ],
     });
