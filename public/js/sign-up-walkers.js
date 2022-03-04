@@ -6,9 +6,6 @@ async function signupFormHandler(event) {
   const nameInput = document.querySelector('#name-signup').value.trim();
   const hourlyRateInput = document.querySelector('#hourly-rate').value.trim();
   const phoneInput = document.querySelector('#phone-signup').value.trim();
-  const timesAvailableInput = document
-    .querySelector('#times-available')
-    .value.trim();
 
   if (
     emailInput &&
@@ -16,7 +13,6 @@ async function signupFormHandler(event) {
     nameInput &&
     hourlyRateInput &&
     phoneInput &&
-    timesAvailableInput
   ) {
     const response = await fetch('/api/walkers', {
       method: 'post',
@@ -26,7 +22,6 @@ async function signupFormHandler(event) {
         walker_name: nameInput,
         hourly_rate: hourlyRateInput,
         phone: phoneInput,
-        times_available: timesAvailableInput,
       }),
       headers: { 'Content-Type': 'application/json' },
     });

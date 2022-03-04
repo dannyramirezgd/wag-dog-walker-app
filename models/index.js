@@ -12,21 +12,23 @@ Dog.belongsTo(Owner, {
   onDelete: 'CASCADE',
 });
 
-Dog.belongsToMany(Calendar, {
+Dog.belongsToMany(Walker, {
+  through: Calendar,
   foreignKey: 'dog_id',
   onDelete: 'SET NULL',
 });
 
-Walker.belongsTo(Calendar, {
+Walker.belongsToMany(Dog, {
+  through: Calendar,
   foreignKey: 'walker_id',
   onDelete: 'CASCADE',
 });
 
-Calendar.hasMany(Dog, {
+Calendar.belongsTo(Dog, {
   foreignKey: 'dog_id',
 });
 
-Calendar.hasMany(Walker, {
+Calendar.belongsTo(Walker, {
   foreignKey: 'walker_id',
 });
 

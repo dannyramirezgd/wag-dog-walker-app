@@ -55,7 +55,15 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const newOwnerData = await Owner.create(req.body);
-    res.json(newOwnerData);
+    req.session.save(() => {
+      req.session.user_id = newOwnerData.id;
+      req.session.loggedIn = true;
+      req.session.walkerLogin = false;
+      res.json({
+        user: newOwnerData,
+        message: `${newOwnerData.owner_name}, you are now logged in!`,
+      });
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
