@@ -22,7 +22,7 @@ async function signupFormHandler(event) {
     if (response.ok) {
       const data = await response.json();
       setTimeout(() => {
-        document.location.replace(`/owner/dashboard/${data.id}`);
+        document.location.replace(`/owner/dashboard/${data.user.id}`);
       }, 500);
     } else {
       alert(response.statusText);
