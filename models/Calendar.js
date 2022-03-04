@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Dog extends Model {}
+class Calendar extends Model {}
 
-Dog.init(
+Calendar.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,21 +11,32 @@ Dog.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    dog_name: {
+    day: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1],
       },
     },
-    size: {
+    time: {
       type: DataTypes.STRING,
       allowNull: false,
+      validate: {
+        is: /([01]?[0-9]|2[0-3]):[0-5][0-9]/,
+      },
     },
-    owner_id: {
+    walker_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      references: {
+        model: 'walker',
+        key: 'id',
+      },
+    },
+    dog_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'owner',
+        model: 'dog',
         key: 'id',
       },
     },
@@ -35,8 +46,8 @@ Dog.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dog',
+    modelName: 'Calendar',
   },
 );
 
-module.exports = Dog;
+module.exports = Calendar;
