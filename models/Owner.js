@@ -52,6 +52,10 @@ Owner.init(
         len: [10, 10],
       },
     },
+    profile_pic: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {

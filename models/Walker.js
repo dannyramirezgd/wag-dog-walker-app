@@ -50,6 +50,10 @@ Walker.init(
       allowNull: false,
       isDecimal: true,
     },
+    profile_pic: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
   },
   {
     hooks: {
