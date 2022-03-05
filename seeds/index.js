@@ -11,11 +11,11 @@ const seedAll = async () => {
   await seedOwners();
   console.log('\n----- OWNERS DATA SEEDED -----\n');
 
-  await seedDog();
-  console.log('\n----- DOGS DATA SEEDED -----\n');
-
   await seedWalkers();
   console.log('\n----- WALKERS DATA SEEDED -----\n');
+
+  await seedDog();
+  console.log('\n----- DOGS DATA SEEDED -----\n');
 
   await seedCalendars();
   console.log('\n----- CAlENDAR DATA SEEDED -----\n');
