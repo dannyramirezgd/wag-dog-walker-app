@@ -5,21 +5,34 @@
         <ul>
             Walker Info
             <li>
-                {{walker.walker_name}}
+                {{walkerInfo.walker_name}}
             </li>
             <li>
-                {{walker.email}}
+                {{walkerInfo.email}}
             </li>
             <li>
-                {{walker.hourly_rate}}
+                {{walkerInfo.hourly_rate}}
             </li>
             <li>
-                {{walker.phone}}
+                {{walkerInfo.phone}}
+            </li>
+            <li>
+                Appointments
+                {{#each walkerInfo.calendar}}                
+                {{#if this.dog_id}}
+                {{this.day}}
+                {{this.time}}
+                {{this.dog.dog_name}}
+                {{/if}}
+                {{/each}}
+                Times Available
+                 {{#each walkerInfo.calendar}}
+                 {{#unless this.dog_id}}
+                {{this.day}}
+                {{this.time}}
+                {{/unless}}
+                {{/each}}
             </li>
         </ul>
-    </div>
-    <div>
-        dogs
-        {{> dog-info walker.dogs}}
     </div>
 </section>

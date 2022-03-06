@@ -20,6 +20,18 @@ const loginFormHandler = async (event) => {
       alert('Failed to log in.');
     }
   }
+
+  if (email && password) {
+    const response = await fetch('/api/calendars', {
+      method: 'GET',
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      const data = await response.json();
+      
+    }
+  }
 };
 
 document

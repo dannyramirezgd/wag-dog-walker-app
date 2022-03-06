@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dog, Owner, Walker } = require('../../models');
+const { Dog, Owner, Walker, Calendar } = require('../../models');
 
 router.get('/sign-up', (req, res) => {
   res.render('walker-signup');
@@ -13,20 +13,22 @@ router.get('/dashboard/:id', async (req, res) => {
   try {
     const singleWalkerData = await Walker.findOne({
       where: { id: req.params.id },
-      include: [
-        {
-          model: Dog,
-          attributes: ['dog_name', 'size'],
-          include: {
-            model: Owner,
-            attributes: ['owner_name', 'email', 'phone', 'address'],
-          },
-        },
-      ],
     });
+    const calendarRequest = await Calendar.findAll({
+      where: { walker_id: req.params.id },
+      include: {
+        model: Dog,
+      },
+    });
+
     const walker = singleWalkerData.get({ plain: true });
+    const calendar = calendarRequest.map((calendar) =>
+      calendar.get({ plain: true }),
+    );
+    const walkerInfo = { ...walker, calendar: calendar };
+    console.log(walkerInfo);
     res.render('walker-dashboard', {
-      walker,
+      walkerInfo,
       walkerLogin: true,
       loggedIn: true,
     });

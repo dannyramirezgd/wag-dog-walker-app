@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Walker } = require('../../models');
+const { Walker, Calendar } = require('../../models');
 
 // GET /api/walkers all the walkers information.
 router.get('/', async (req, res) => {
