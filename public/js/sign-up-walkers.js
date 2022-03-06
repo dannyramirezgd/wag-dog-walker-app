@@ -22,6 +22,7 @@ async function signupFormHandler(event) {
         walker_name: nameInput,
         hourly_rate: hourlyRateInput,
         phone: phoneInput,
+        profile_pic: 'null',
       }),
       headers: { 'Content-Type': 'application/json' },
     });

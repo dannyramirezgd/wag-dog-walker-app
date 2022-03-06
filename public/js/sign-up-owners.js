@@ -16,6 +16,7 @@ async function signupFormHandler(event) {
         owner_name: nameInput,
         address: addressInput,
         phone: phoneInput,
+        profile_pic: 'null',
       }),
       headers: { 'Content-Type': 'application/json' },
     });

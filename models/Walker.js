@@ -52,7 +52,7 @@ Walker.init(
     },
     profile_pic: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
   },
   {
