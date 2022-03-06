@@ -1,36 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link
+      rel='stylesheet'
+      href='https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css'
+    />
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css'
+      integrity='sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=='
+      crossorigin='anonymous'
+      referrerpolicy='no-referrer'
+    />
+    <link rel='preconnect' href='https://fonts.googleapis.com' />
+    <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin />
+    <link
+      href='https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Bebas+Neue&family=Shadows+Into+Light&family=Smooch+Sans:wght@100;300&display=swap'
+      rel='stylesheet'
+    />
+    <link rel='stylesheet' href='/public/css/stylesheet.css' />
+    <title>Wag!</title>
+  </head>
+  <body class='has-navabar-fixed-top'>
+    <nav
+      class='navbar is-link is-fixed-top'
+      role='navigation'
+      aria-label='main navigation'
+    >
+      <div class='navbar-brand'>
+        <a class='navbar-item is-size-4' href='/'>W | A | G </a>
+      </div>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wag!</title>
-  <link rel="stylesheet" type="text/css" href="/css/jass.css">
-  <link rel="stylesheet" type="text/css" href="/css/style.css">
-</head>
+      <div class='navbar-menu'>
+        <div class='navbar-end'>
+          <a href='/about-us' class='navbar-item'> About Us </a>
+          {{#unless walkerLogin}}
+            <a href='/walker/signup' class='navbar-item'> Become a Walker </a>
+          {{/unless}}
+          <a href='/contact-us' class='navbar-item'> Contact Us </a>
 
-<body>
-  <header>
-    <a href='/'><h1>Wag: Connecting Dogs and Walkers</h1></a>
-  </header>
-  <nav>
-    <a href="/about-us">About Us</a>
-    {{#unless walkerLogin}}
-    <a href="/walker/sign-up">Become a Walker</a>
-    {{/unless}}
-    <a href="/contact-us">Contact Us</a>
+          <div class='navbar-item'>
+            <div class='buttons'>
+              <a class='button is-primary'><strong>Sign up</strong></a>
+              <a class='button is-light'> Log in </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    {{{body}}}
+
     {{#if loggedIn}}
-    <button id="logout" class="btn-no-style">Logout</button>
+      <script src='/js/logout.js'></script>
     {{/if}}
-  </nav>
-  <main>
- {{{body}}}
-  </main>
-  {{#if loggedIn}}
-  <script src="/js/logout.js"></script>
-  {{/if}}
-</body>
-<footer>
-  &copy; 2022 TeamWag Inc. All rights reserved.
-</footer>
+  </body>
+  <footer class='footer'>
+    <div class='content has-text-centered'>
+      <p>&copy; 2022 TeamWag Inc. All rights reserved.</p>
+    </div>
+  </footer>
 </html>
