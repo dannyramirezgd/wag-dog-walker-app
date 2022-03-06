@@ -1,1 +1,72 @@
-This is the contact us page
+<section class='contact-us my-2'>
+  <div class='contact-blob has-text-centered'>
+    <h1 class='is-size-1'>CONTACT US</h1>
+    <p class='is-size-5'>
+      Email us with any questions or inquiries. We would be happy to answer your
+      questions and set up a meeting with you.
+    </p>
+  </div>
+  <div class='columns mt-1'>
+    <div class='column is-three-fifths is-offset-one-fifth'>
+      <form class='contact-form'>
+        <div class='field'>
+          <label class='label' for='contact-name'>Name:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='contact-name'
+              class='input'
+              type='text'
+              placeholder='John Smith'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-user'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='contact-email'>Email:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='contact-email'
+              class='input'
+              type='email'
+              placeholder='e.g. johnsmith@gmail.com'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-envelope'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='contact-subject'>Subject:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='contact-subject'
+              class='input'
+              type='text'
+              placeholder='Question or Inquiry'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-scroll'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='contact-msg'>Message:</label>
+          <textarea
+            id='contact-msg'
+            type='text'
+            class='textarea is-primary'
+            placeholder='message'
+          ></textarea>
+        </div>
+        <div class='control my-5'>
+          <button type='submit' class='button is-link'>Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
