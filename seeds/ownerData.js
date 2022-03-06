@@ -1,180 +1,346 @@
 const { Owner } = require('../models');
+const { faker } = require('@faker-js/faker');
 
 const ownerData = [
   {
-    owner_name: 'Wayne',
-    password: 'HJqiAOGCch',
-    email: 'wtheodore0@histats.com',
-    address: '2 Garrison Drive',
-    phone: '7435290076',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Vance',
-    password: 'MV3W5H6',
-    email: 'vsmye1@ifeng.com',
-    address: '87729 Florence Park',
-    phone: '6817396538',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Kipp',
-    password: 'U4EMznx',
-    email: 'kschooling2@shop-pro.jp',
-    address: '642 Loomis Lane',
-    phone: '9512195754',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Devlen',
-    password: 'HxOO1kNMBfnN',
-    email: 'dlandor3@blogger.com',
-    address: '0 Sunnyside Pass',
-    phone: '7210193730',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Jeanette',
-    password: 'WJGj5T1',
-    email: 'jbarrett4@examiner.com',
-    address: '8 Tony Circle',
-    phone: '0672996911',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Reider',
-    password: 'QhnfGE3bus',
-    email: 'rkenneway5@deliciousdays.com',
-    address: '3 Mcbride Court',
-    phone: '8677793340',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Maxy',
-    password: 'ZRZflW',
-    email: 'mprester6@wisc.edu',
-    address: '8 Talmadge Street',
-    phone: '1793994030',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Rica',
-    password: 'if0D7jk',
-    email: 'rlock7@opera.com',
-    address: '35615 Comanche Trail',
-    phone: '8634190077',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Raphael',
-    password: 'bPx0juxwxm',
-    email: 'rpitman8@apple.com',
-    address: '58 Thompson Terrace',
-    phone: '7299093654',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Omar',
-    password: '5EEKHC',
-    email: 'ostokey9@a8.net',
-    address: '98 Veith Alley',
-    phone: '0190392509',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Bridget',
-    password: 'oLOuVu1wsla',
-    email: 'bcallena@theatlantic.com',
-    address: '30302 Evergreen Trail',
-    phone: '1298597510',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Itch',
-    password: 'cjrwBY',
-    email: 'idurdenb@dailymotion.com',
-    address: '333 Park Meadow Trail',
-    phone: '9017992410',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Darsey',
-    password: 'DO165HRv08R',
-    email: 'dwhetnallc@utexas.edu',
-    address: '4 Cascade Circle',
-    phone: '4059790814',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Shayna',
-    password: 'rwBfU4',
-    email: 'squinceyd@a8.net',
-    address: '04308 Florence Alley',
-    phone: '0391793232',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Lavena',
-    password: '1TCfj906',
-    email: 'lcanete@census.gov',
-    address: '56 Delladonna Way',
-    phone: '6106190025',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Sergei',
-    password: 'O5S2SS',
-    email: 'scrossthwaitef@sciencedaily.com',
-    address: '27 La Follette Trail',
-    phone: '7127693242',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Waiter',
-    password: 'Wd5x8yeYs',
-    email: 'wdalescog@marketwatch.com',
-    address: '06132 Nova Plaza',
-    phone: '1704497020',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Cassy',
-    password: 'Z6y9unOp',
-    email: 'cdebenhamh@istockphoto.com',
-    address: '63959 Tomscot Terrace',
-    phone: '8519591541',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Iago',
-    password: 'LE5npV',
-    email: 'imackimi@princeton.edu',
-    address: '6 Atwood Center',
-    phone: '2677297133',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Nomi',
-    password: 'wwf7ZOqTrtI',
-    email: 'nkirragej@vimeo.com',
-    address: '71 Thierer Court',
-    phone: '4445893746',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Garth',
-    password: '2S6NWe',
-    email: 'gdysertk@geocities.com',
-    address: '52 Monica Junction',
-    phone: '5357396021',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Alic',
-    password: 'rkpcltAf',
-    email: 'ajuleffl@youtube.com',
-    address: '94 Lerdahl Drive',
-    phone: '5040699536',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Iosep',
-    password: '3jesbq1mV',
-    email: 'ibaldcockm@fc2.com',
-    address: '695 Moland Park',
-    phone: '6623095811',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Drona',
-    password: 'lBD9GQyhJGt',
-    email: 'ddrainsn@mashable.com',
-    address: '416 Sage Drive',
-    phone: '3039296764',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
   {
-    owner_name: 'Tynan',
-    password: 'iuT9yg',
-    email: 'tduffillo@google.fr',
-    address: '06493 Old Gate Center',
-    phone: '7013399755',
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
+  },
+  {
+    owner_name: faker.name.firstName(),
+    password: faker.internet.password(),
+    email: faker.internet.email(),
+    address: faker.address.streetAddress(),
+    phone: faker.datatype
+      .number({ min: 1230000000, max: 9999999999 })
+      .toString(),
+    profile_pic: faker.image.avatar(),
   },
 ];
 

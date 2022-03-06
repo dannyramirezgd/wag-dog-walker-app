@@ -1,29 +1,92 @@
-<form class='signup-form'>
-    <h2>Thank you for your interest in our company!</h2>
-    <h3>Please fill in your information below</h3>
-  <div>
-    <label for='email-signup'>email:</label>
-    <input type='text' id='email-signup' />
+<section class='section'>
+  <div class='columns mt-3'>
+    <div class='column is-three-fifths is-offset-one-fifth'>
+      <div class='box has-text-centered prompt'>
+        <p>Thank you for your interest in our company!</p>
+        <p>Please fill in your information below</p>
+      </div>
+      <form class='signup-form'>
+        <div class='field'>
+          <label class='label' for='email-signup'>Email:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='email-signup'
+              class='input'
+              type='email'
+              placeholder='johndoe@gmail.com'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-envelope'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='password-signup'>Password:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='password-signup'
+              class='input'
+              type='password'
+              placeholder='**********'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-key'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='name-signup'>Name:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='name-signup'
+              class='input'
+              type='text'
+              placeholder="what's your name?"
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-user'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='address-signup'>address:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='address-signup'
+              class='input'
+              type='text'
+              placeholder='where do you live?'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-house'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='phone-signup'>phone number:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='phone-signup'
+              class='input'
+              type='tel'
+              placeholder='your phone number?'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-phone'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='control my-5'>
+          <button type='submit' class='button is-link'>Submit</button>
+        </div>
+      </form>
+    </div>
   </div>
-  <div>
-    <label for='password-signup'>password:</label>
-    <input type='password' id='password-signup' />
-  </div>
-  <div>
-    <label for='name-signup'>Name:</label>
-    <input type='text' id='name-signup' />
-  </div>
-  <div>
-    <label for='address-signup'>address:</label>
-    <input type='text' id='address-signup' />
-  </div>
-  <div>
-    <label for='phone-signup'>phone:</label>
-    <input type='phone' id='phone-signup' />
-  </div>
-  <div>
-    <button type='submit'>signup</button>
-  </div>
-</form>
+</section>
 
 <script src='/js/sign-up-owners.js'></script>
