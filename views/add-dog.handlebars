@@ -1,19 +1,47 @@
-<form class='signup-form'>
-    <h2>Congrats on your new dog!</h2>
-    <h3>Please fill in your dog's information below</h3>
-  <div>
-    <label for='dog-name'>Dog Name:</label>
-    <input type='text' id='dog-name' />
+<section class='section'>
+  <div class='columns mt-3'>
+    <div class='column is-three-fifths is-offset-one-fifth'>
+      <div class='box has-text-centered prompt'>
+        <p>Congrats on your new dog!</p>
+        <p>Please fill in your dog's information below</p>
+      </div>
+      <form class='signup-form'>
+        <div class='field'>
+          <label class='label' for='dog-name'>Dog Name:</label>
+          <div class='control has-icons-left'>
+            <input
+              id='dog-name'
+              class='input'
+              type='text'
+              placeholder='Flash'
+            />
+            <span class='icon is-small is-left'>
+              <i class='fa-solid fa-paw'></i>
+            </span>
+          </div>
+        </div>
+
+        <div class='field'>
+          <label class='label' for='size'>Dog's Size:</label>
+          <div class='select'>
+            <select name='size' id='size'>
+              <option>Select the size</option>
+              <option value='small'>Small</option>
+              <option value='medium'>Medium</option>
+              <option value='large'>Large</option>
+              <option value='xl'>XL+</option>
+            </select>
+          </div>
+        </div>
+
+        <div class='control my-5'>
+          <button id='addDog' type='submit' class='button is-link'>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
-  <div>
-    <label for='size'>Dog's Size:</label>
-    <select name='size' id='size'>
-        <option value='small'>Small</option>
-        <option value='medium'>Medium</option>
-        <option value='large'>Large</option>
-        <option value='XL'>XL+</option>
-    </select>
-  </div>
-<button type="submit" id="addDog">Add Dog</button>
+</section>
 
 <script src='/js/add-dog.js'></script>
