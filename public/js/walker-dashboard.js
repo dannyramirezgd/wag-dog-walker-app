@@ -11,8 +11,7 @@ async function makeRequest(property, time) {
     headers: { 'Content-Type': 'application/json' },
   });
   if (response.ok) {
-    const data = await response.json();
-    console.log(data);
+    document.location.reload();
   }
 }
 
@@ -127,7 +126,6 @@ async function weeklyAvailableHandler(event) {
       makeRequest(property, time);
     });
   }
-  document.location.reload();
 }
 
 document
