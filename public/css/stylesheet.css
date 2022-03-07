@@ -45,3 +45,14 @@
   font-size: 1.5rem;
   font-weight: light;
 }
+
+.owner-content {
+  font-family: 'Bebas Neue', Lucida Sans, Lucida Sans Regular, Lucida Grande,
+    Lucida Grande, Arial, sans-serif;
+  font-size: 1.4rem;
+}
+
+.owner-info {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.3rem;
+}

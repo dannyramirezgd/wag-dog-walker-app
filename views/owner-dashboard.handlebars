@@ -18,13 +18,13 @@
                     </div>
                 </div>
 
-                <div class="content mt-3">
-                    <p>Address: {{owner.address}}</p>
-                    <p>Phone #: {{owner.phone}}</p>
+                <div class="owner-content mt-3">
+                    <p>Address: <span class="owner-info">{{owner.address}}</span></p>
+                    <p>Phone #: <span class="owner-info">{{owner.phone}}</span></p>
                 </div>
         
                 <div class="content mt-3">
-                    <p>Dogs: {{> dog-info owner.dogs}}</p>
+                    <p>Dogs Information: {{> dog-info owner.dogs}}</p>
                 </div>
             </div>
   
