@@ -13,21 +13,22 @@ router.get('/dashboard/:id', async (req, res) => {
   try {
     const singleWalkerData = await Walker.findOne({
       where: { id: req.params.id },
-      include: [
-        {
-          model: Calendar,
-          include: {
-            model: Dog,
-            include: {
-              model: Owner,
-            },
-          },
-        },
-      ],
     });
+    const calendarRequest = await Calendar.findAll({
+      where: { walker_id: req.params.id },
+      include: {
+        model: Dog,
+      },
+    });
+
     const walker = singleWalkerData.get({ plain: true });
+    const calendar = calendarRequest.map((calendar) =>
+      calendar.get({ plain: true }),
+    );
+    const walkerInfo = { ...walker, calendar: calendar };
+    console.log(walkerInfo);
     res.render('walker-dashboard', {
-      walker,
+      walkerInfo,
       walkerLogin: true,
       loggedIn: true,
     });
