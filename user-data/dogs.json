@@ -1,0 +1,202 @@
+[
+  {
+    "dog_name": "Serena",
+    "size": "small",
+    "owner_id": 6
+  },
+  {
+    "dog_name": "Teresa",
+    "size": "medium",
+    "owner_id": 20
+  },
+  {
+    "dog_name": "Mertie",
+    "size": "large",
+    "owner_id": 8
+  },
+  {
+    "dog_name": "Coy",
+    "size": "medium",
+    "owner_id": 33
+  },
+  {
+    "dog_name": "Dwight",
+    "size": "small",
+    "owner_id": 22
+  },
+  {
+    "dog_name": "Francisco",
+    "size": "small",
+    "owner_id": 15
+  },
+  {
+    "dog_name": "Pauline",
+    "size": "small",
+    "owner_id": 21
+  },
+  {
+    "dog_name": "Jamison",
+    "size": "large",
+    "owner_id": 28
+  },
+  {
+    "dog_name": "Ivory",
+    "size": "large",
+    "owner_id": 19
+  },
+  {
+    "dog_name": "Trycia",
+    "size": "small",
+    "owner_id": 19
+  },
+  {
+    "dog_name": "Donna",
+    "size": "medium",
+    "owner_id": 22
+  },
+  {
+    "dog_name": "Patricia",
+    "size": "medium",
+    "owner_id": 32
+  },
+  {
+    "dog_name": "Raoul",
+    "size": "small",
+    "owner_id": 19
+  },
+  {
+    "dog_name": "Angie",
+    "size": "medium",
+    "owner_id": 14
+  },
+  {
+    "dog_name": "Jordy",
+    "size": "small",
+    "owner_id": 31
+  },
+  {
+    "dog_name": "Lysanne",
+    "size": "medium",
+    "owner_id": 10
+  },
+  {
+    "dog_name": "Jaquelin",
+    "size": "large",
+    "owner_id": 28
+  },
+  {
+    "dog_name": "Eino",
+    "size": "small",
+    "owner_id": 17
+  },
+  {
+    "dog_name": "Santino",
+    "size": "large",
+    "owner_id": 10
+  },
+  {
+    "dog_name": "Sid",
+    "size": "medium",
+    "owner_id": 32
+  },
+  {
+    "dog_name": "Reyna",
+    "size": "small",
+    "owner_id": 16
+  },
+  {
+    "dog_name": "Clifford",
+    "size": "medium",
+    "owner_id": 27
+  },
+  {
+    "dog_name": "Melody",
+    "size": "medium",
+    "owner_id": 12
+  },
+  {
+    "dog_name": "Kara",
+    "size": "large",
+    "owner_id": 34
+  },
+  {
+    "dog_name": "Dennis",
+    "size": "medium",
+    "owner_id": 18
+  },
+  {
+    "dog_name": "Jabari",
+    "size": "large",
+    "owner_id": 28
+  },
+  {
+    "dog_name": "Warren",
+    "size": "large",
+    "owner_id": 14
+  },
+  {
+    "dog_name": "Art",
+    "size": "small",
+    "owner_id": 18
+  },
+  {
+    "dog_name": "Heather",
+    "size": "large",
+    "owner_id": 33
+  },
+  {
+    "dog_name": "Jonatan",
+    "size": "small",
+    "owner_id": 25
+  },
+  {
+    "dog_name": "Orville",
+    "size": "medium",
+    "owner_id": 28
+  },
+  {
+    "dog_name": "Kenneth",
+    "size": "small",
+    "owner_id": 16
+  },
+  {
+    "dog_name": "Kirstin",
+    "size": "small",
+    "owner_id": 12
+  },
+  {
+    "dog_name": "Lisandro",
+    "size": "large",
+    "owner_id": 16
+  },
+  {
+    "dog_name": "Josh",
+    "size": "large",
+    "owner_id": 21
+  },
+  {
+    "dog_name": "Sim",
+    "size": "medium",
+    "owner_id": 32
+  },
+  {
+    "dog_name": "Elsie",
+    "size": "medium",
+    "owner_id": 26
+  },
+  {
+    "dog_name": "Violette",
+    "size": "medium",
+    "owner_id": 12
+  },
+  {
+    "dog_name": "Anya",
+    "size": "large",
+    "owner_id": 9
+  },
+  {
+    "dog_name": "Shyann",
+    "size": "medium",
+    "owner_id": 3
+  }
+]
