@@ -1,19 +1,46 @@
-<div>
+<table class="table">
     {{#each this}}
-    <section>
-        <div>
-            list of dogs
-            {{this.dog_name}}
-            {{size}}
-            {{owner.owner_name}}
-            {{owner.email}}
-            {{owner.phone}}
-            {{owner.address}}
-            {{walker.walker_name}}
-            {{walker.email}}
-            {{walker.phone}}
-            {{walker.hourly_rate}}
-        </div>
-    </section>
+    <tbody>
+        <tr>
+            <th>Dog Name</th>
+            <td>{{this.dog_name}}</td>
+        </tr>
+        <tr>
+            <th>Size</th>
+            <td>{{size}}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{owner.owner_name}}</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td><a href="mailto:{{owner.email}}">{{owner.email}}</a></td>
+        </tr>
+        <tr>
+            <th>Phone Number/th>
+            <td>{{owner.phone}}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{owner.address}}</td>
+        </tr>
+        <tr>
+            <th>Walker Name</th>
+            <td>{{walker.walker_name}}</td>
+        </tr>
+        <tr>
+            <th>Walker Email</th>
+            <td><a href="mailto:{{walker.email}}">{{walker.email}}</a></td>
+        </tr>
+        <tr>
+            <th>Walker Phone Number</th>
+            <td>{{walker.phone}}</td>
+        </tr>
+        <tr>
+            <th>Walker Hourly Rate</th>
+            <td>${{walker.hourly_rate}}</td>
+        </tr>
+    </tbody>
     {{/each}}
-</div>
+</table>
