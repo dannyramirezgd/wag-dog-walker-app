@@ -88,4 +88,20 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+router.get('/schedule', async (req, res) => {
+  try {
+    //Select * from calendar where dog_id IS NULL;
+    const calendarAvailable = await Calendar.findAll({
+      where: { dog_id: null },
+      include: {
+        model: Walker,
+      },
+    });
+    res.json(calendarAvailable);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

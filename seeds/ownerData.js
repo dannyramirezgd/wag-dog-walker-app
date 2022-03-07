@@ -4,7 +4,7 @@ const { faker } = require('@faker-js/faker');
 const ownerData = [
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -14,7 +14,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -24,7 +24,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -34,7 +34,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -44,7 +44,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -54,7 +54,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -64,7 +64,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -74,7 +74,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -84,7 +84,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -94,7 +94,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -104,7 +104,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -114,7 +114,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -124,7 +124,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -134,7 +134,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -144,7 +144,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -154,7 +154,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -164,7 +164,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -174,7 +174,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -184,7 +184,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -194,7 +194,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -204,7 +204,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -214,7 +214,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -224,7 +224,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -234,7 +234,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -244,7 +244,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -254,7 +254,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -264,7 +264,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -274,7 +274,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -284,7 +284,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -294,7 +294,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -304,7 +304,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -314,7 +314,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -324,7 +324,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype
@@ -334,7 +334,7 @@ const ownerData = [
   },
   {
     owner_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     address: faker.address.streetAddress(),
     phone: faker.datatype

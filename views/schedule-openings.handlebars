@@ -1,0 +1,13 @@
+<section>
+    <ul>
+        {{#each calendar}}
+        <li>
+            <p>{{this.day}}</p>
+            <p>{{this.time}}</p>
+            <p>{{this.walker.walker_name}}</p>
+            <p>{{this.walker.hourly_rate}}</p>
+            <img src={{this.walker.profile_pic}} alt='profile pic'/>
+        </li>
+        {{/each}}
+    </ul>
+</section>
