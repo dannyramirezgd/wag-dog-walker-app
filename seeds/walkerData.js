@@ -4,7 +4,7 @@ const { faker } = require('@faker-js/faker');
 const walkerData = [
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -18,7 +18,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -32,7 +32,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -46,7 +46,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -60,7 +60,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -74,7 +74,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -88,7 +88,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -102,7 +102,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -116,7 +116,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -130,7 +130,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -144,7 +144,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -158,7 +158,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -172,7 +172,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -186,7 +186,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -200,7 +200,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -214,7 +214,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -228,7 +228,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -242,7 +242,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -256,7 +256,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -270,7 +270,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -284,7 +284,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -298,7 +298,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -312,7 +312,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -326,7 +326,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -340,7 +340,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -354,7 +354,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -368,7 +368,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -382,7 +382,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -396,7 +396,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -410,7 +410,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -424,7 +424,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -438,7 +438,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -452,7 +452,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -466,7 +466,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })
@@ -480,7 +480,7 @@ const walkerData = [
   },
   {
     walker_name: faker.name.firstName(),
-    password: faker.internet.password(),
+    password: 'password',
     email: faker.internet.email(),
     phone: faker.datatype
       .number({ min: 1230000000, max: 9999999999 })

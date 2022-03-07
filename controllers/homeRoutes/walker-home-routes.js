@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dog, Owner, Walker } = require('../../models');
+const { Dog, Owner, Walker, Calendar } = require('../../models');
 
 router.get('/sign-up', (req, res) => {
   res.render('walker-signup');
@@ -15,11 +15,12 @@ router.get('/dashboard/:id', async (req, res) => {
       where: { id: req.params.id },
       include: [
         {
-          model: Dog,
-          attributes: ['dog_name', 'size'],
+          model: Calendar,
           include: {
-            model: Owner,
-            attributes: ['owner_name', 'email', 'phone', 'address'],
+            model: Dog,
+            include: {
+              model: Owner,
+            },
           },
         },
       ],
