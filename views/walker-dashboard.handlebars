@@ -1,38 +1,798 @@
 <section>
-    <img src=""/>
-    profile picture
-    <div>
-        <ul>
-            Walker Info
-            <li>
-                {{walkerInfo.walker_name}}
-            </li>
-            <li>
-                {{walkerInfo.email}}
-            </li>
-            <li>
-                {{walkerInfo.hourly_rate}}
-            </li>
-            <li>
-                {{walkerInfo.phone}}
-            </li>
-            <li>
-                Appointments
-                {{#each walkerInfo.calendar}}                
-                {{#if this.dog_id}}
-                {{this.day}}
-                {{this.time}}
-                {{this.dog.dog_name}}
-                {{/if}}
-                {{/each}}
-                Times Available
-                 {{#each walkerInfo.calendar}}
-                 {{#unless this.dog_id}}
-                {{this.day}}
-                {{this.time}}
-                {{/unless}}
-                {{/each}}
-            </li>
-        </ul>
-    </div>
+  <img src='' />
+  profile picture
+  <div>
+    <ul>
+      Walker Info
+      <li>
+        {{walkerInfo.walker_name}}
+      </li>
+      <li>
+        {{walkerInfo.email}}
+      </li>
+      <li>
+        {{walkerInfo.hourly_rate}}
+      </li>
+      <li>
+        {{walkerInfo.phone}}
+      </li>
+      <li>
+        Appointments
+        {{#each walkerInfo.calendar}}
+          {{#if this.dog_id}}
+            {{this.day}}
+            {{this.time}}
+            {{this.dog.dog_name}}
+          {{/if}}
+        {{/each}}
+        Times Available
+        {{#each walkerInfo.calendar}}
+          {{#unless this.dog_id}}
+            {{this.day}}
+            {{this.time}}
+          {{/unless}}
+        {{/each}}
+      </li>
+    </ul>
+  </div>
+  <div>
+    Please provide which dates you are available to walk:
+    <form class="weekly-form">
+      <div>
+        <div>Sunday
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='6:00'
+        />
+        <label for="Sunday">6:00</label>
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='7:00'
+        />
+        <label for='Sunday'>7:00</label>
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='8:00'
+        />
+        <label for='Sunday'>8:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='9:00'
+        />
+        <label for='Sunday'>9:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='10:00'
+        />
+        <label for='Sunday'>10:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='11:00'
+        />
+        <label for='Sunday'>11:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='12:00'
+        />
+        <label for='Sunday'>12:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='13:00'
+        />
+        <label for='Sunday'>13:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='14:00'
+        />
+        <label for='Sunday'>14:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='15:00'
+        />
+        <label for='Sunday'>15:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='16:00'
+        />
+        <label for='Sunday'>16:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='17:00'
+        />
+        <label for='Sunday'>17:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='18:00'
+        />
+        <label for='Sunday'>18:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='19:00'
+        />
+        <label for='Sunday'>19:00</label>        
+        <input
+          type='checkbox'
+          id='Sunday'
+          name='Sunday'
+          value='20:00'
+        />
+        <label for='Sunday'>20:00</label>
+        </div>
+        <div>Monday
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='6:00'
+        />
+        <label for="Monday">6:00</label>
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='7:00'
+        />
+        <label for='Monday'>7:00</label>
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='8:00'
+        />
+        <label for='Monday'>8:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='9:00'
+        />
+        <label for='Monday'>9:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='10:00'
+        />
+        <label for='Monday'>10:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='11:00'
+        />
+        <label for='Monday'>11:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='12:00'
+        />
+        <label for='Monday'>12:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='13:00'
+        />
+        <label for='Monday'>13:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='14:00'
+        />
+        <label for='Monday'>14:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='15:00'
+        />
+        <label for='Monday'>15:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='16:00'
+        />
+        <label for='Monday'>16:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='17:00'
+        />
+        <label for='Monday'>17:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='18:00'
+        />
+        <label for='Monday'>18:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='19:00'
+        />
+        <label for='Monday'>19:00</label>        
+        <input
+          type='checkbox'
+          id='Monday'
+          name='Monday'
+          value='20:00'
+        />
+        <label for='Monday'>20:00</label>
+        </div>
+        <div>Tuesday
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='6:00'
+        />
+        <label for="Tuesday">6:00</label>
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='7:00'
+        />
+        <label for='Tuesday'>7:00</label>
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='8:00'
+        />
+        <label for='Tuesday'>8:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='9:00'
+        />
+        <label for='Tuesday'>9:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='10:00'
+        />
+        <label for='Tuesday'>10:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='11:00'
+        />
+        <label for='Tuesday'>11:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='12:00'
+        />
+        <label for='Tuesday'>12:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='13:00'
+        />
+        <label for='Tuesday'>13:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='14:00'
+        />
+        <label for='Tuesday'>14:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='15:00'
+        />
+        <label for='Tuesday'>15:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='16:00'
+        />
+        <label for='Tuesday'>16:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='17:00'
+        />
+        <label for='Tuesday'>17:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='18:00'
+        />
+        <label for='Tuesday'>18:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='19:00'
+        />
+        <label for='Tuesday'>19:00</label>        
+        <input
+          type='checkbox'
+          id='Tuesday'
+          name='Tuesday'
+          value='20:00'
+        />
+        <label for='Tuesday'>20:00</label>
+        </div>
+        <div>Wednesday
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='6:00'
+        />
+        <label for="Wednesday">6:00</label>
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='7:00'
+        />
+        <label for='Wednesday'>7:00</label>
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='8:00'
+        />
+        <label for='Wednesday'>8:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='9:00'
+        />
+        <label for='Wednesday'>9:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='10:00'
+        />
+        <label for='Wednesday'>10:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='11:00'
+        />
+        <label for='Wednesday'>11:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='12:00'
+        />
+        <label for='Wednesday'>12:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='13:00'
+        />
+        <label for='Wednesday'>13:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='14:00'
+        />
+        <label for='Wednesday'>14:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='15:00'
+        />
+        <label for='Wednesday'>15:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='16:00'
+        />
+        <label for='Wednesday'>16:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='17:00'
+        />
+        <label for='Wednesday'>17:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='18:00'
+        />
+        <label for='Wednesday'>18:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='19:00'
+        />
+        <label for='Wednesday'>19:00</label>        
+        <input
+          type='checkbox'
+          id='Wednesday'
+          name='Wednesday'
+          value='20:00'
+        />
+        <label for='Wednesday'>20:00</label>  
+        </div>
+        <div>Thursday
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='6:00'
+        />
+        <label for="Thursday">6:00</label>
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='7:00'
+        />
+        <label for='Thursday'>7:00</label>
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='8:00'
+        />
+        <label for='Thursday'>8:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='9:00'
+        />
+        <label for='Thursday'>9:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='10:00'
+        />
+        <label for='Thursday'>10:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='11:00'
+        />
+        <label for='Thursday'>11:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='12:00'
+        />
+        <label for='Thursday'>12:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='13:00'
+        />
+        <label for='Thursday'>13:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='14:00'
+        />
+        <label for='Thursday'>14:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='15:00'
+        />
+        <label for='Thursday'>15:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='16:00'
+        />
+        <label for='Thursday'>16:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='17:00'
+        />
+        <label for='Thursday'>17:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='18:00'
+        />
+        <label for='Thursday'>18:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='19:00'
+        />
+        <label for='Thursday'>19:00</label>        
+        <input
+          type='checkbox'
+          id='Thursday'
+          name='Thursday'
+          value='20:00'
+        />
+        <label for='Thursday'>20:00</label>  
+        </div>
+        <div>Friday
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='6:00'
+        />
+        <label for="Friday">6:00</label>
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='7:00'
+        />
+        <label for='Friday'>7:00</label>
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='8:00'
+        />
+        <label for='Friday'>8:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='9:00'
+        />
+        <label for='Friday'>9:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='10:00'
+        />
+        <label for='Friday'>10:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='11:00'
+        />
+        <label for='Friday'>11:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='12:00'
+        />
+        <label for='Friday'>12:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='13:00'
+        />
+        <label for='Friday'>13:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='14:00'
+        />
+        <label for='Friday'>14:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='15:00'
+        />
+        <label for='Friday'>15:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='16:00'
+        />
+        <label for='Friday'>16:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='17:00'
+        />
+        <label for='Friday'>17:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='18:00'
+        />
+        <label for='Friday'>18:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='19:00'
+        />
+        <label for='Friday'>19:00</label>        
+        <input
+          type='checkbox'
+          id='Friday'
+          name='Friday'
+          value='20:00'
+        />
+        <label for='Friday'>20:00</label>  
+        </div>
+        <div>Saturday
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='6:00'
+        />
+        <label for="Saturday">6:00</label>
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='7:00'
+        />
+        <label for='Saturday'>7:00</label>
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='8:00'
+        />
+        <label for='Saturday'>8:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='9:00'
+        />
+        <label for='Saturday'>9:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='10:00'
+        />
+        <label for='Saturday'>10:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='11:00'
+        />
+        <label for='Saturday'>11:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='12:00'
+        />
+        <label for='Saturday'>12:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='13:00'
+        />
+        <label for='Saturday'>13:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='14:00'
+        />
+        <label for='Saturday'>14:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='15:00'
+        />
+        <label for='Saturday'>15:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='16:00'
+        />
+        <label for='Saturday'>16:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='17:00'
+        />
+        <label for='Saturday'>17:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='18:00'
+        />
+        <label for='Saturday'>18:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='19:00'
+        />
+        <label for='Saturday'>19:00</label>        
+        <input
+          type='checkbox'
+          id='Saturday'
+          name='Saturday'
+          value='20:00'
+        />
+        <label for='Saturday'>20:00</label>  
+        </div>          
+      </div>
+      <div>
+        <button type='submit'>Confirm</button>
+      </div>
+    </form>
+  </div>
 </section>
+<script src="/public/js/walker-dashboard.js"
