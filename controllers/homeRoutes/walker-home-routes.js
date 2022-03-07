@@ -20,17 +20,15 @@ router.get('/dashboard/:id', async (req, res) => {
         model: Dog,
       },
     });
-
     const walker = singleWalkerData.get({ plain: true });
     const calendar = calendarRequest.map((calendar) =>
       calendar.get({ plain: true }),
     );
     const walkerInfo = { ...walker, calendar: calendar };
-    console.log(walkerInfo);
     res.render('walker-dashboard', {
       walkerInfo,
-      walkerLogin: true,
       loggedIn: true,
+      walkerLogin: true,
     });
   } catch (err) {
     console.log(err);

@@ -34,7 +34,15 @@ router.get('/:id', async (req, res) => {
 router.post('/', async (req, res) => {
   try {
     const newWalkerData = await Walker.create(req.body);
-    res.json(newWalkerData);
+    req.session.save(() => {
+      req.session.user_id = newWalkerData.id;
+      req.session.loggedIn = true;
+      req.session.walkerLogin = true;
+      res.json({
+        user: newWalkerData,
+        message: `${newWalkerData.owner_name}, you are now signed up!`,
+      });
+    });
   } catch (err) {
     console.log(err);
     res.status(500).json(err);
@@ -61,7 +69,6 @@ router.post('/login', async (req, res) => {
       req.session.user_id = walkerUserNameData.id;
       req.session.walkerLogin = true;
       req.session.loggedIn = true;
-      console.log(req.session);
       res.json({
         user: walkerUserNameData,
         message: `${walkerUserNameData.walker_name}, you are now logged in!`,

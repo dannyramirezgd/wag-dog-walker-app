@@ -100,16 +100,6 @@ router.post('/login', async (req, res) => {
   }
 });
 
-router.post('/logout', (req, res) => {
-  if (req.session.loggedIn) {
-    req.session.destroy(() => {
-      res.status(204).end();
-    });
-  } else {
-    res.status(404).end();
-  }
-});
-
 // PUT api/owners/:id updating a owner's info based on its id.
 router.put('/:id', async (req, res) => {
   try {
