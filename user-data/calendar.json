@@ -1,0 +1,386 @@
+[
+  {
+    "day": "Wednesday",
+    "time": "12:00",
+    "walker_id": 31,
+    "dog_id": 19
+  },
+  {
+    "day": "Saturday",
+    "time": "9:00",
+    "walker_id": 18,
+    "dog_id": 31
+  },
+  {
+    "day": "Saturday",
+    "time": "11:00",
+    "walker_id": 12,
+    "dog_id": 6
+  },
+  {
+    "day": "Friday",
+    "time": "19:00",
+    "walker_id": 20,
+    "dog_id": 34
+  },
+  {
+    "day": "Friday",
+    "time": "11:00",
+    "walker_id": 14,
+    "dog_id": 7
+  },
+  {
+    "day": "Monday",
+    "time": "16:00",
+    "walker_id": 19,
+    "dog_id": 27
+  },
+  {
+    "day": "Friday",
+    "time": "17:00",
+    "walker_id": 18,
+    "dog_id": 40
+  },
+  {
+    "day": "Monday",
+    "time": "19:00",
+    "walker_id": 18,
+    "dog_id": 17
+  },
+  {
+    "day": "Wednesday",
+    "time": "17:00",
+    "walker_id": 5,
+    "dog_id": 32
+  },
+  {
+    "day": "Friday",
+    "time": "12:00",
+    "walker_id": 8,
+    "dog_id": 23
+  },
+  {
+    "day": "Thursday",
+    "time": "17:00",
+    "walker_id": 25,
+    "dog_id": 32
+  },
+  {
+    "day": "Friday",
+    "time": "19:00",
+    "walker_id": 19,
+    "dog_id": 20
+  },
+  {
+    "day": "Wednesday",
+    "time": "10:00",
+    "walker_id": 35,
+    "dog_id": 14
+  },
+  {
+    "day": "Saturday",
+    "time": "10:00",
+    "walker_id": 25,
+    "dog_id": 16
+  },
+  {
+    "day": "Thursday",
+    "time": "9:00",
+    "walker_id": 23,
+    "dog_id": 9
+  },
+  {
+    "day": "Saturday",
+    "time": "8:00",
+    "walker_id": 15,
+    "dog_id": 12
+  },
+  {
+    "day": "Sunday",
+    "time": "14:00",
+    "walker_id": 6,
+    "dog_id": 10
+  },
+  {
+    "day": "Sunday",
+    "time": "14:00",
+    "walker_id": 29,
+    "dog_id": 24
+  },
+  {
+    "day": "Thursday",
+    "time": "14:00",
+    "walker_id": 2,
+    "dog_id": 37
+  },
+  {
+    "day": "Sunday",
+    "time": "12:00",
+    "walker_id": 20,
+    "dog_id": 27
+  },
+  {
+    "day": "Wednesday",
+    "time": "19:00",
+    "walker_id": 26,
+    "dog_id": 17
+  },
+  {
+    "day": "Thursday",
+    "time": "17:00",
+    "walker_id": 2,
+    "dog_id": 16
+  },
+  {
+    "day": "Tuesday",
+    "time": "7:00",
+    "walker_id": 2,
+    "dog_id": 26
+  },
+  {
+    "day": "Wednesday",
+    "time": "20:00",
+    "walker_id": 24,
+    "dog_id": 37
+  },
+  {
+    "day": "Thursday",
+    "time": "6:00",
+    "walker_id": 32,
+    "dog_id": 9
+  },
+  {
+    "day": "Monday",
+    "time": "20:00",
+    "walker_id": 4,
+    "dog_id": 1
+  },
+  {
+    "day": "Wednesday",
+    "time": "7:00",
+    "walker_id": 23,
+    "dog_id": 10
+  },
+  {
+    "day": "Sunday",
+    "time": "7:00",
+    "walker_id": 32,
+    "dog_id": 28
+  },
+  {
+    "day": "Tuesday",
+    "time": "13:00",
+    "walker_id": 24,
+    "dog_id": 24
+  },
+  {
+    "day": "Sunday",
+    "time": "8:00",
+    "walker_id": 9,
+    "dog_id": 6
+  },
+  {
+    "day": "Tuesday",
+    "time": "6:00",
+    "walker_id": 7,
+    "dog_id": 27
+  },
+  {
+    "day": "Wednesday",
+    "time": "13:00",
+    "walker_id": 10,
+    "dog_id": 6
+  },
+  {
+    "day": "Sunday",
+    "time": "16:00",
+    "walker_id": 35,
+    "dog_id": 35
+  },
+  {
+    "day": "Sunday",
+    "time": "14:00",
+    "walker_id": 28,
+    "dog_id": 15
+  },
+  {
+    "day": "Thursday",
+    "time": "10:00",
+    "walker_id": 10,
+    "dog_id": 14
+  },
+  {
+    "day": "Tuesday",
+    "time": "20:00",
+    "walker_id": 16,
+    "dog_id": 11
+  },
+  {
+    "day": "Sunday",
+    "time": "18:00",
+    "walker_id": 4,
+    "dog_id": 26
+  },
+  {
+    "day": "Tuesday",
+    "time": "16:00",
+    "walker_id": 8,
+    "dog_id": 23
+  },
+  {
+    "day": "Thursday",
+    "time": "7:00",
+    "walker_id": 6,
+    "dog_id": 14
+  },
+  {
+    "day": "Sunday",
+    "time": "7:00",
+    "walker_id": 3,
+    "dog_id": null
+  },
+  {
+    "day": "Monday",
+    "time": "11:00",
+    "walker_id": 11,
+    "dog_id": null
+  },
+  {
+    "day": "Wednesday",
+    "time": "15:00",
+    "walker_id": 7,
+    "dog_id": null
+  },
+  {
+    "day": "Friday",
+    "time": "20:00",
+    "walker_id": 7,
+    "dog_id": null
+  },
+  {
+    "day": "Friday",
+    "time": "15:00",
+    "walker_id": 11,
+    "dog_id": null
+  },
+  {
+    "day": "Tuesday",
+    "time": "9:00",
+    "walker_id": 32,
+    "dog_id": null
+  },
+  {
+    "day": "Thursday",
+    "time": "13:00",
+    "walker_id": 6,
+    "dog_id": null
+  },
+  {
+    "day": "Thursday",
+    "time": "10:00",
+    "walker_id": 12,
+    "dog_id": null
+  },
+  {
+    "day": "Wednesday",
+    "time": "12:00",
+    "walker_id": 29,
+    "dog_id": null
+  },
+  {
+    "day": "Friday",
+    "time": "17:00",
+    "walker_id": 19,
+    "dog_id": null
+  },
+  {
+    "day": "Tuesday",
+    "time": "9:00",
+    "walker_id": 33,
+    "dog_id": null
+  },
+  {
+    "day": "Thursday",
+    "time": "9:00",
+    "walker_id": 18,
+    "dog_id": null
+  },
+  {
+    "day": "Friday",
+    "time": "16:00",
+    "walker_id": 22,
+    "dog_id": null
+  },
+  {
+    "day": "Wednesday",
+    "time": "8:00",
+    "walker_id": 33,
+    "dog_id": null
+  },
+  {
+    "day": "Sunday",
+    "time": "8:00",
+    "walker_id": 21,
+    "dog_id": null
+  },
+  {
+    "day": "Tuesday",
+    "time": "12:00",
+    "walker_id": 13,
+    "dog_id": null
+  },
+  {
+    "day": "Wednesday",
+    "time": "8:00",
+    "walker_id": 31,
+    "dog_id": null
+  },
+  {
+    "day": "Tuesday",
+    "time": "12:00",
+    "walker_id": 19,
+    "dog_id": null
+  },
+  {
+    "day": "Tuesday",
+    "time": "6:00",
+    "walker_id": 31,
+    "dog_id": null
+  },
+  {
+    "day": "Friday",
+    "time": "15:00",
+    "walker_id": 35,
+    "dog_id": null
+  },
+  {
+    "day": "Tuesday",
+    "time": "11:00",
+    "walker_id": 13,
+    "dog_id": null
+  },
+  {
+    "day": "Tuesday",
+    "time": "10:00",
+    "walker_id": 24,
+    "dog_id": null
+  },
+  {
+    "day": "Friday",
+    "time": "14:00",
+    "walker_id": 22,
+    "dog_id": null
+  },
+  {
+    "day": "Friday",
+    "time": "14:00",
+    "walker_id": 35,
+    "dog_id": null
+  },
+  {
+    "day": "Monday",
+    "time": "13:00",
+    "walker_id": 16,
+    "dog_id": null
+  }
+]
