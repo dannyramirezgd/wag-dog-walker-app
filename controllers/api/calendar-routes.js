@@ -104,4 +104,18 @@ router.get('/schedule', async (req, res) => {
   }
 });
 
+router.get('/:id', async (req, res) => {
+  try {
+    const calendarDelete = await Calendar.destroy({
+      where: {
+        walker_id: req.params.id,
+      },
+    });
+    res.json(calendarDelete);
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

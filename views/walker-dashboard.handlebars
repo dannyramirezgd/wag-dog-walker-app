@@ -36,9 +36,17 @@
     </ul>
   </div>
   <div>
-    Please provide which dates you are available to walk:
-    <form class="weekly-form">
+
+      {{#if walkerInfo.calendar}}
+      <form class="change-times">Would you like to update your available times?
+        <button type="submit">Confirm</button>
+      </form>
+    <script src="/public/js/walker-dashboard-change-times.js"></script>
+    
+      {{else}}    
+      <form class="weekly-form">
       <div>
+        Please provide which dates you are available to walk:
         <div>Sunday
         <input
           type='checkbox'
@@ -792,7 +800,8 @@
       <div>
         <button type='submit'>Confirm</button>
       </div>
-    </form>
+      <script src="/public/js/walker-dashboard.js"
+      {{/if}}
+      </form>
   </div>
 </section>
-<script src="/public/js/walker-dashboard.js"

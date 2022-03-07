@@ -127,6 +127,7 @@ async function weeklyAvailableHandler(event) {
       makeRequest(property, time);
     });
   }
+  document.location.reload();
 }
 
 document
