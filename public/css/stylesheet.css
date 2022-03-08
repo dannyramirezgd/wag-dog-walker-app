@@ -24,6 +24,12 @@
   font-size: 1.2rem;
 }
 
+.special {
+  font-family: 'Architects Daughter', Lucida Sans, Lucida Sans Regular,
+    Lucida Grande, Lucida Sans Unicode, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+}
+
 .about-title {
   font-family: 'Smooch Sans', Lucida Sans, Lucida Sans Regular, Lucida Grande,
     Lucida Grande, Arial, sans-serif;
@@ -55,4 +61,8 @@
 .owner-info {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1.3rem;
+}
+
+.table {
+  border: 1px solid black;
 }

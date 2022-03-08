@@ -1,40 +1,4 @@
-<section>
-  <img src='' />
-  profile picture
-  <div>
-    <ul>
-      Walker Info
-      <li>
-        {{walkerInfo.walker_name}}
-      </li>
-      <li>
-        {{walkerInfo.email}}
-      </li>
-      <li>
-        {{walkerInfo.hourly_rate}}
-      </li>
-      <li>
-        {{walkerInfo.phone}}
-      </li>
-      <li>
-        Appointments
-        {{#each walkerInfo.calendar}}
-          {{#if this.dog_id}}
-            {{this.day}}
-            {{this.time}}
-            {{this.dog.dog_name}}
-          {{/if}}
-        {{/each}}
-        Times Available
-        {{#each walkerInfo.calendar}}
-          {{#unless this.dog_id}}
-            {{this.day}}
-            {{this.time}}
-          {{/unless}}
-        {{/each}}
-      </li>
-    </ul>
-  </div>
+
   <div>
 
       {{#if walkerInfo.calendar}}
@@ -805,3 +769,70 @@
       </form>
   </div>
 </section>
+
+<div class="columns mt-3">
+    <div class="column is-three-fifths is-offset-one-fifth">
+        <div class="card">
+            <div class="card-image">
+                <figure class="image is-3by2">
+                    <img src="{{walkerInfo.profile_pic}}" alt="walker profile image">
+                </figure>
+            </div>
+  
+            <div class="card-content">
+    
+                <div class="walker">
+     
+                    <div class="walker-content">
+                        <p class="title is-3 mb-0">{{walkerInfo.walker_name}}</p>
+                        <a class="my-0" href="mailto:{{walkerInfo.email}}">{{walkerInfo.email}}</a>
+                    </div>
+                </div>
+
+                <div class="walker-content mt-3">
+                    <p>Hourly Rate: <span class="walker-info">${{walkerInfo.hourly_rate}}</span></p>
+                    <p>Phone #: <span class="walker-info">{{walkerInfo.phone}}</span></p>
+                </div>
+        
+                <div class="content mt-3">
+                    <p>Appointments:</p>
+                    {{#each walkerInfo.calendar}}
+                    {{#if this.dog_id}}
+                    <table class="table">
+                      <tbody>
+                        <tr>
+                          <th>Day</th>
+                          <td>{{this.day}}</td>
+                        </tr>
+                        <tr>
+                          <th>Time</th>
+                          <td>{{this.time}}</td>
+                        </tr>
+                        <tr>
+                          <th>Dog Name</th>
+                          <td>{{this.dog.dog_name}}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    {{/if}}
+                    {{/each}}
+                </div>
+                 <div class="content mt-2">
+                    <p>Time Available:</p>
+                    {{#each walkerInfo.calendar}}
+                    {{#unless this.dog_id}}
+                    <span class="tag">
+                      {{this.day}}
+                      {{this.time}}
+                    </span>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+  
+            <footer class="card-footer">
+                <a href="/owner/{{owner.id}}/add-dog" class="card-footer-item">Add Dog</a>
+            </footer>
+        </div>
+    </div>
+</div>
