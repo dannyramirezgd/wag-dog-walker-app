@@ -1,0 +1,30 @@
+<span>Select which dog you would like to make an appoitnment for:</span>
+<select class='doggos'>
+  {{#each this.dogs}}
+    <option data-dog='{{this.id}}'>{{this.dog_name}}</option>
+  {{/each}}
+</select>
+
+<table class='table'>
+  <thead>
+    <tr>
+      <th>Walker</th>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Add</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this.calendar}}
+      <tr>
+        <td>{{this.walker.walker_name}}</td>
+        <td>{{this.day}}</td>
+        <td>{{this.time}}</td>
+        <td data-calendar='{{this.calendar.id}}'><button
+            class='schedule-dog'
+          >Schedule Dog</button></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<script src='/public/js/schedule-appointment.js'></script>
