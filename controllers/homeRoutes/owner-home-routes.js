@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Dog, Owner, Walker } = require('../../models');
+const { Dog, Owner, Walker, Calendar } = require('../../models');
 
 router.get('/dashboard/:id', async (req, res) => {
   try {
@@ -12,9 +12,17 @@ router.get('/dashboard/:id', async (req, res) => {
         },
       ],
     });
+    const calendarAvailable = await Calendar.findAll({
+      where: { dog_id: null },
+      include: {
+        model: Walker,
+      },
+    });
+    const calendar = calendarAvailable.map((data) => data.get({ plain: true }));
     const owner = singleOwnerData.get({ plain: true });
+    const ownerInfo = { ...owner, calendar: calendar };
     res.render('owner-dashboard', {
-      owner,
+      ownerInfo,
       loggedIn: true,
       walkerLogin: false,
     });

@@ -4,8 +4,8 @@
         <div class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
-                    {{#if owner.profile_pic}}
-                    <img src="{{owner.profile_pic}}" alt="owner profile image">
+                    {{#if ownerInfo.profile_pic}}
+                    <img src="{{ownerInfo.profile_pic}}" alt="owner profile image">
                     {{else}}
                     <img src="https://st.depositphotos.com/2218212/2938/i/950/depositphotos_29387653-stock-photo-facebook-profile.jpg" alt="stock profile image">
                     {{/if}}
@@ -17,23 +17,27 @@
                 <div class="owner">
      
                     <div class="owner-content">
-                        <p class="title is-3 mb-0">{{owner.owner_name}}</p>
-                        <a class="my-0" href="mailto:{{owner.email}}">{{owner.email}}</a>
+                        <p class="title is-3 mb-0">{{ownerInfo.owner_name}}</p>
+                        <a class="my-0" href="mailto:{{ownerInfo.email}}">{{ownerInfo.email}}</a>
                     </div>
                 </div>
 
                 <div class="owner-content mt-3">
-                    <p>Address: <span class="owner-info">{{owner.address}}</span></p>
-                    <p>Phone Number: <span class="owner-info">{{owner.phone}}</span></p>
+                    <p>Address: <span class="owner-info">{{ownerInfo.address}}</span></p>
+                    <p>Phone Number: <span class="owner-info">{{ownerInfo.phone}}</span></p>
                 </div>
         
                 <div class="content mt-3">
-                    <p>Dogs Information: {{> dog-info owner.dogs}}</p>
+                    <p>Dogs Information: {{> dog-info ownerInfo.dogs}}</p>
+                </div>
+
+                <div>
+                    <p>Openings: {{> calendar-avail ownerInfo}}</p>
                 </div>
             </div>
   
             <footer class="card-footer">
-                <a href="/owner/{{owner.id}}/add-dog" class="card-footer-item">Add Dog</a>
+                <a href="/owner/{{ownerInfo.id}}/add-dog" class="card-footer-item">Add Dog</a>
             </footer>
         </div>
     </div>
