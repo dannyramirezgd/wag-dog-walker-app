@@ -72,7 +72,7 @@ router.put('/:id', async (req, res) => {
 
 router.delete('/:id', async (req, res) => {
   try {
-    const removeCalendarData = await Calendar.destroy(req.body, {
+    const removeCalendarData = await Calendar.destroy({
       where: { id: req.params.id },
     });
     if (!removeCalendarData) {

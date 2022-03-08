@@ -28,25 +28,49 @@
         Times Available
         {{#each walkerInfo.calendar}}
           {{#unless this.dog_id}}
+          <div data-calendar="{{this.id}}">
             {{this.day}}
             {{this.time}}
+            <button type="click" class="delete-btn">Delete</button>
+          </div>
+            
           {{/unless}}
         {{/each}}
       </li>
     </ul>
   </div>
   <div>
-
-      {{#if walkerInfo.calendar}}
-      <form class="change-times">Would you like to update your available times?
-        <button type="submit">Confirm</button>
-      </form>
-    <script src="/public/js/walker-dashboard-change-times.js"></script>
-    
-      {{else}}    
       <form class="weekly-form">
       <div>
         Please provide which dates you are available to walk:
+        <select class="day">
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+          <option>Sunday</option>
+        </select>
+        <select class="time">
+          <option>6:00</option>
+          <option>7:00</option>
+          <option>8:00</option>
+          <option>9:00</option>
+          <option>10:00</option>
+          <option>11:00</option>
+          <option>12:00</option>
+          <option>13:00</option>
+          <option>14:00</option>
+          <option>15:00</option>
+          <option>16:00</option>
+          <option>17:00</option>
+          <option>18:00</option>
+          <option>19:00</option>
+          <option>20:00</option>
+        </select>
+        <button type="submit">Add Time</button>
+        {{!-- <div data-calendar="{{walkerInfo.calendar.id}}"></div>
         <div>Sunday
         <input
           type='checkbox'
@@ -799,9 +823,8 @@
       </div>
       <div>
         <button type='submit'>Confirm</button>
-      </div>
+      </div> --}}
       <script src="/public/js/walker-dashboard.js"></script>
-      {{/if}}
       </form>
   </div>
 </section>
