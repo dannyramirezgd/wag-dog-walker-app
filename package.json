@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "engines": {
     "node": ">=16.0.0"
-},
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
@@ -15,6 +15,7 @@
   "author": "wag-team",
   "license": "MIT",
   "dependencies": {
+    "@faker-js/faker": "^6.0.0-alpha.7",
     "bcrypt": "^5.0.1",
     "connect-session-sequelize": "^7.1.2",
     "dotenv": "^16.0.0",
@@ -23,8 +24,8 @@
     "express-session": "^1.17.2",
     "handlebars": "^4.7.7",
     "mysql2": "^2.3.3",
-    "sequelize": "^6.17.0",
-    "@faker-js/faker": "^6.0.0-alpha.7"
+    "nodemailer": "^6.7.2",
+    "sequelize": "^6.17.0"
   },
   "devDependencies": {
     "eslint": "^8.10.0",

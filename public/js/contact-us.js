@@ -1,15 +1,15 @@
 async function contactUsEmail(event) {
   event.preventDefault();
-  const name = document.querySelector('#contact-name').value.trim();
-  const email = document.querySelector('#contact-email').value.trim();
+  const senderName = document.querySelector('#contact-name').value.trim();
+  const senderEmail = document.querySelector('#contact-email').value.trim();
   const subject = document.querySelector('#contact-subject').value.trim();
   const message = document.querySelector('#contact-msg').value.trim();
 
   const response = await fetch('/send', {
     method: 'POST',
     body: JSON.stringify({
-      name: name,
-      email: email,
+      name: senderName,
+      email: senderEmail,
       subject: subject,
       message: message,
     }),
