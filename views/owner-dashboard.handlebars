@@ -23,6 +23,10 @@
                     <p>Phone Number: <span class="owner-info">{{ownerInfo.phone}}</span></p>
                 </div>
         
+                <a href="/owner/{{ownerInfo.id}}/add-dog"><button class="button is-info">Add Dog</button></a>
+
+
+                </div>
                 <div class="content mt-3">
                     <p>Dogs Information: {{> dog-info ownerInfo.dogs}}</p>
                 </div>
@@ -31,10 +35,6 @@
                     <p>Openings: {{> calendar-avail ownerInfo}}</p>
                 </div>
             </div>
-  
-            <footer class="card-footer">
-                <a href="/owner/{{ownerInfo.id}}/add-dog" class="card-footer-item">Add Dog</a>
-            </footer>
         </div>
     </div>
 </div>
