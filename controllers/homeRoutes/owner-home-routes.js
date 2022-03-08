@@ -8,7 +8,6 @@ router.get('/dashboard/:id', async (req, res) => {
       include: [
         {
           model: Dog,
-          attributes: ['dog_name', 'size'],
         },
       ],
     });
