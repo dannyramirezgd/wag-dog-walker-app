@@ -1,4 +1,4 @@
-async function addDogtoCalendar(event) {
+async function addDogToCalendar(event) {
   event.preventDefault();
 
   const calendarId = this.parentNode.dataset.calendar;
@@ -19,4 +19,4 @@ async function addDogtoCalendar(event) {
 
 document
   .querySelectorAll('.schedule-dog')
-  .forEach((element) => element.addEventListener('click', addDogtoCalendar));
+  .forEach((element) => element.addEventListener('click', addDogToCalendar));

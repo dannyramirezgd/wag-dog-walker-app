@@ -1,6 +1,5 @@
 const router = require('express').Router();
-const { Dog, Owner, Walker, Calendar } = require('../../models');
-const session = require('express-session');
+const { Dog, Walker, Calendar } = require('../../models');
 
 router.get('/sign-up', (req, res) => {
   res.render('walker-signup');
