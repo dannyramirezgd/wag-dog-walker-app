@@ -43,10 +43,10 @@
 
           <div class='navbar-item'>
             <div class='buttons'>
-              <a href='/owner/sign-up' class='button is-primary'><strong>Sign up</strong></a>
               {{#if loggedIn}}
-              <button id="logout" class='button is-light'> Log out </button>
+              <button id="logout" class='button special is-light'> Log out </button>
               {{else}}
+              <a href='/owner/sign-up' class='button is-primary'><strong>Sign up</strong></a>
               <a href='/login' class='button is-light'> Log in </a>
               {{/if}}
             </div>
