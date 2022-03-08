@@ -494,6 +494,7 @@ const walkerData = [
   },
 ];
 
-const seedWalkers = () => Walker.bulkCreate(walkerData);
+const seedWalkers = () =>
+  Walker.bulkCreate(walkerData, { individualHooks: true });
 
 module.exports = seedWalkers;
