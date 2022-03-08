@@ -344,6 +344,6 @@ const ownerData = [
   },
 ];
 
-const seedOwners = () => Owner.bulkCreate(ownerData);
+const seedOwners = () => Owner.bulkCreate(ownerData, { individualHooks: true });
 
 module.exports = seedOwners;
