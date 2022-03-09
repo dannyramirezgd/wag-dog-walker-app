@@ -58,6 +58,11 @@
     Lucida Grande, Arial, sans-serif;
   font-size: 1.4rem;
 }
+.walker-content {
+  font-family: 'Bebas Neue', Lucida Sans, Lucida Sans Regular, Lucida Grande,
+    Lucida Grande, Arial, sans-serif;
+  font-size: 1.4rem;
+}
 
 .owner-info {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -66,7 +71,6 @@
 
 .table-body {
   border: 1px solid black;
-  
 }
 
 /* Responsive for the hero image */
