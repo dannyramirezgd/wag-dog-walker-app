@@ -1,13 +1,27 @@
-<p>Here is your dog's schedule</p>
-<div class='content mt-3'>
-  <table class='table'>
-    <thead>
-      <th>Day</th>
-      <th>Time</th>
-      <th>Walker</th>
-    </thead>
-    <tbody>
-{{> walkers-dog dogSchedule}}
-    </tbody>
-  </table>
+<div class="columns mt-3">
+  <div class="column is-three-fifths is-offset-one-fifth">
+    <div class="card">
+      <div class="card-content">
+        <div class="block has-text-centered is-size-1">
+          <p>Here is your dog's schedule</p>
+        </div>
+          <div class='content mt-3'>
+            <table class='table'>
+              <thead>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Walker</th>
+              </thead>
+              <tbody>
+                {{> walkers-dog dogSchedule}}
+              </tbody>
+            </table>
+          </div>
+      <hr />
+      <a href="/"><button class='button is-info is-light'>Back to Dashboard</button></a>
+      </div>
+    </div>
+  </div>
 </div>
+
+

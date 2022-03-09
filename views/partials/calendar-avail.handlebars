@@ -1,10 +1,18 @@
-<span>Select which dog you would like to make an appointment for:</span>
-<select id='doggos'>
-  {{#each this.dogs}}
-    <option data-dog='{{this.id}}'>{{this.dog_name}}</option>
-  {{/each}}
-</select>
-
+<div><i>Select which dog you would like to make an appointment for: </i>
+  <div class='control has-icons-left'>
+    <div class='select is-hover is-link is-rounded is-normal'>
+      <select id='doggos'>
+        {{#each this.dogs}}
+          <option data-dog='{{this.id}}'>{{this.dog_name}}</option>
+        {{/each}}
+      </select>
+    </div>
+    <div class='icon is-small is-left'>
+      <i class='fa-solid fa-paw'></i>
+    </div>
+  </div>
+</div>
+<hr />
 <table class='table'>
   <thead>
     <tr>
@@ -21,7 +29,7 @@
         <td>{{this.day}}</td>
         <td>{{this.time}}</td>
         <td data-calendar='{{this.id}}'><button
-            class='schedule-dog'
+            class='schedule-dog button is-info is-light is-small'
           >Schedule Dog</button></td>
       </tr>
     {{/each}}
