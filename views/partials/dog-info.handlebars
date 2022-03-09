@@ -1,6 +1,6 @@
-{{#each this}}
   <table class='table'>
     <tbody>
+      {{#each this.dogs}}
       <tr>
         <th>Dog Name</th>
         <td>{{dog_name}}</td>
@@ -9,7 +9,11 @@
         <th>Size</th>
         <td>{{size}}</td>
       </tr>
+      <tr>
+        <th><a href='/owner/dashboard/dog-schedule/{{id}}'>Schedule</a></th>
+      </tr>
+      {{/each}} 
+      {{!-- {{> walkers-dog this.calendar}} --}}
     </tbody>
   </table>
-{{/each}}
-<script src="/public/js/add-walker-to-dog.js"></script>
+ 

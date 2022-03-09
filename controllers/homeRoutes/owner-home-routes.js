@@ -8,7 +8,6 @@ router.get('/dashboard/:id', async (req, res) => {
       include: [
         {
           model: Dog,
-          attributes: ['dog_name', 'size'],
         },
       ],
     });
@@ -50,4 +49,22 @@ router.get('/:id/add-dog', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/dashboard/dog-schedule/:id', async (req, res) => {
+  try {
+    const dogScheduleData = await Calendar.findAll({
+      where: { dog_id: req.params.id },
+      include: {
+        model: Walker,
+        attributes: ['walker_name'],
+      },
+    });
+    const dogSchedule = dogScheduleData.map((dog) => dog.get({ plain: true }));
+    res.render('dog-schedule', { dogSchedule: dogSchedule });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

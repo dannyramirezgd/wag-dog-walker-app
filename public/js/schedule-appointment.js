@@ -3,10 +3,13 @@ async function addDogToCalendar(event) {
 
   const calendarId = this.parentNode.dataset.calendar;
 
+  const doggo = document.getElementById('doggos');
+  const doggoSelected = doggo.options[doggo.selectedIndex].dataset.dog;
+
   const response = await fetch(`/api/calendars/${calendarId}`, {
     method: 'PUT',
     body: JSON.stringify({
-      dog_id: null,
+      dog_id: doggoSelected,
     }),
     headers: {
       'Content-Type': 'application/json',
