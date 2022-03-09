@@ -1,6 +1,7 @@
 .hero {
-  background-image: url('/public/img/heroPhoto.jpeg');
   background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url('/public/img/heroPhoto.jpeg');
 }
 
 .hero p {
@@ -65,4 +66,23 @@
 
 .table {
   border: 1px solid black;
+}
+
+/* Responsive for the hero image */
+@media screen and (max-width: 480px) {
+  .hero {
+    background-image: url('/public/img/heroPhoto1.jpeg');
+    background-repeat: no-repeat;
+  }
+  .hero p {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 1023px) {
+  .hero {
+    background-image: url('/public/img/heroPhoto1.jpeg');
+    background-repeat: no-repeat;
+    font-size: 2rem;
+  }
 }

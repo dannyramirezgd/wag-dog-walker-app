@@ -33,21 +33,24 @@
         <a class='navbar-item is-size-4' href='/'>W | A | G </a>
       </div>
 
-      <div class='navbar-menu'>
+      <div class='navbar-menu is-active has-background-link'>
         <div class='navbar-end'>
-          <a href='/about-us' class='navbar-item'> About Us </a>
+          <a href='/about-us' class='navbar-item has-text-white'> About Us </a>
           {{#unless walkerLogin}}
-            <a href='/walker/sign-up' class='navbar-item'> Become a Walker </a>
+            <a href='/walker/sign-up' class='navbar-item has-text-white'> Become a Walker </a>
           {{/unless}}
-          <a href='/contact-us' class='navbar-item'> Contact Us </a>
+          <a href='/contact-us' class='navbar-item has-text-white'> Contact Us </a>
 
           <div class='navbar-item'>
             <div class='buttons'>
               {{#if loggedIn}}
-              <button id="logout" class='button special is-light'> Log out </button>
+                <button id='logout' class='button special is-light'>
+                  Log out
+                </button>
               {{else}}
-              <a href='/owner/sign-up' class='button is-primary'><strong>Sign up</strong></a>
-              <a href='/login' class='button is-light'> Log in </a>
+                <a href='/owner/sign-up' class='button is-primary'><strong>Sign
+                    up</strong></a>
+                <a href='/login' class='button is-light'> Log in </a>
               {{/if}}
             </div>
           </div>
