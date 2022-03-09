@@ -20,6 +20,7 @@ router.get('/dashboard/:id', async (req, res) => {
     const calendar = calendarAvailable.map((data) => data.get({ plain: true }));
     const owner = singleOwnerData.get({ plain: true });
     const ownerInfo = { ...owner, calendar: calendar };
+    console.log(ownerInfo);
     res.render('owner-dashboard', {
       ownerInfo,
       loggedIn: true,

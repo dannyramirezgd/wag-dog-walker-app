@@ -9,7 +9,13 @@
         <th>Size</th>
         <td>{{size}}</td>
       </tr>
+      {{#each this.calendar}}
+        <tr>
+          <td>{{this.walker.name}}</td>
+          <td>{{this.day}}</td>
+          <td>{{this.time}}</td>
+        </tr>
+      {{/each}}
     </tbody>
   </table>
 {{/each}}
-<script src="/public/js/add-walker-to-dog.js"></script>
