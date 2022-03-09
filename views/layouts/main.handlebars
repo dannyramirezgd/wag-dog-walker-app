@@ -22,6 +22,7 @@
     />
     <link rel='stylesheet' href='/public/css/stylesheet.css' />
     <title>Wag!</title>
+    <link rel='icon' href='/public/img/wag.ico' type='image/x-icon' />
   </head>
   <body class='has-navbar-fixed-top'>
     <nav
@@ -37,9 +38,13 @@
         <div class='navbar-end'>
           <a href='/about-us' class='navbar-item has-text-white'> About Us </a>
           {{#unless walkerLogin}}
-            <a href='/walker/sign-up' class='navbar-item has-text-white'> Become a Walker </a>
+            <a href='/walker/sign-up' class='navbar-item has-text-white'>
+              Become a Walker
+            </a>
           {{/unless}}
-          <a href='/contact-us' class='navbar-item has-text-white'> Contact Us </a>
+          <a href='/contact-us' class='navbar-item has-text-white'>
+            Contact Us
+          </a>
 
           <div class='navbar-item'>
             <div class='buttons'>
