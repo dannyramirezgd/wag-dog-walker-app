@@ -3,23 +3,23 @@ const nodemailer = require('nodemailer');
 
 // current connected to free email testing application since didn't want to route to my personal email.
 let transporter = nodemailer.createTransport({
-  host: 'smtp.mailtrap.io',
-  port: 2525,
+  host: 'smtp.gmail.com',
+  port: 587,
   auth: {
-    user: '0d03363be202b6',
-    pass: 'da8c2776d42fab',
+    user: 'team.wag.2022@gmail.com',
+    pass: 'P@ssword1!',
   },
 });
 
 // email sending route.
 router.post('/send', (req, res) => {
-  const { senderName, senderEmail, subject, message } = req.body;
+  console.log(req.body);
 
   const mailData = {
-    from: senderEmail,
-    to: 'team.wag.2022@gmail.com',
-    subject: subject + ' ' + 'from' + ' ' + senderName,
-    text: message,
+    from: 'team.wag.2022@gmail.com',
+    to: 'danny.ramirezgd@gmail.com',
+    subject: req.body.subject + ' ' + 'from' + ' ' + req.body.name,
+    text: req.body.message + 'POC email@' + ' ' + req.body.email,
   };
 
   transporter.sendMail(mailData, (err, info) => {
