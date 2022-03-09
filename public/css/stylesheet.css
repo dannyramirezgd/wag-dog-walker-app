@@ -64,8 +64,9 @@
   font-size: 1.3rem;
 }
 
-.table {
+.table-body {
   border: 1px solid black;
+  
 }
 
 /* Responsive for the hero image */

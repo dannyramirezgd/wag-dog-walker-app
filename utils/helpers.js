@@ -1,5 +1,5 @@
 module.exports = {
-  profile_pic: (data) => {
+  owner_profile_pic: (data) => {
     if (data.profile_pic !== 'null') {
       return `<img src="${data.profile_pic}" alt="owner profile image">`;
     } else {

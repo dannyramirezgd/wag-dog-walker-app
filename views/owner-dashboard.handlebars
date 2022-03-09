@@ -4,7 +4,7 @@
         <div class="card">
             <div class="card-image">
                 <figure class="image is-3by2">
-                    {{{profile_pic ownerInfo}}}
+                    {{{owner_profile_pic ownerInfo}}}
                 </figure>
             </div>
   
@@ -18,25 +18,29 @@
                     </div>
                 </div>
 
-                <div class="owner-content mt-3">
-                    <p>Address: <span class="owner-info">{{ownerInfo.address}}</span></p>
-                    <p>Phone Number: <span class="owner-info">{{ownerInfo.phone}}</span></p>
-                </div>
-        
-                <a href="/owner/{{ownerInfo.id}}/add-dog"><button class="button is-info">Add Dog</button></a>
+                    <div class="owner-content mt-3">
+                        <p>Address: <span class="owner-info">{{ownerInfo.address}}</span></p>
+                        <p>Phone Number: <span class="owner-info">{{ownerInfo.phone}}</span></p>
+                    </div>
 
+                    <div class="add-dog-btn-container">
+                        <a href="/owner/{{ownerInfo.id}}/add-dog"><button class="button is-info">Add Dog</button></a>
+                    </div>
 
-                </div>
-                <div class="content mt-3">
-                    <p>Dogs Information: {{> dog-info ownerInfo}}</p>
-                </div>
+                
+                    <div class="content mt-3">
+                        <p><b>Dogs Information:</b></p>
+                            {{> dog-info ownerInfo}}
+                    </div>
 
-                <div>
-                    <p>Openings: {{> calendar-avail ownerInfo}}</p>
+                    <div class="content">
+                        <p><b>Openings: </b></p>
+                            {{> calendar-avail ownerInfo}}
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
 
 
