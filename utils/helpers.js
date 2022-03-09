@@ -1,6 +1,6 @@
 module.exports = {
   profile_pic: (data) => {
-    console.log(data.profile_pic);
+    //console.log(data.profile_pic);
     if (data.profile_pic !== 'null') {
       return `<img src="${data.profile_pic}" alt="owner profile image">`;
     } else {

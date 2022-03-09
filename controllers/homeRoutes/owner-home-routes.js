@@ -20,7 +20,7 @@ router.get('/dashboard/:id', async (req, res) => {
     const calendar = calendarAvailable.map((data) => data.get({ plain: true }));
     const owner = singleOwnerData.get({ plain: true });
     const ownerInfo = { ...owner, calendar: calendar };
-    console.log(ownerInfo);
+    //console.log(ownerInfo);
     res.render('owner-dashboard', {
       ownerInfo,
       loggedIn: true,
@@ -50,4 +50,23 @@ router.get('/:id/add-dog', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+router.get('/dashboard/dog-schedule/:id', async (req, res) => {
+  try {
+    const dogScheduleData = await Calendar.findAll({
+      where: { dog_id: req.params.id },
+      include: {
+        model: Walker,
+        attributes: ['walker_name'],
+      },
+    });
+    const dogSchedule = dogScheduleData.map((dog) => dog.get({ plain: true }));
+    console.log(dogSchedule.length);
+    res.render('dog-schedule', { dogSchedule: dogSchedule });
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
