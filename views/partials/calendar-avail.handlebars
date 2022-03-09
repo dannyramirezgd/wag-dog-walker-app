@@ -1,8 +1,7 @@
-<p><i>Select which dog you would like to make an appointment for: </i>
+<div><i>Select which dog you would like to make an appointment for: </i>
   <div class='control has-icons-left'>
     <div class='select is-hover is-link is-rounded is-normal'>
       <select id='doggos'>
-        <option selected>Select your dog</option>
         {{#each this.dogs}}
           <option data-dog='{{this.id}}'>{{this.dog_name}}</option>
         {{/each}}
@@ -12,7 +11,7 @@
       <i class='fa-solid fa-paw'></i>
     </div>
   </div>
-</p>
+</div>
 <hr />
 <table class='table'>
   <thead>
