@@ -20,7 +20,6 @@ router.get('/dashboard/:id', async (req, res) => {
     const calendar = calendarAvailable.map((data) => data.get({ plain: true }));
     const owner = singleOwnerData.get({ plain: true });
     const ownerInfo = { ...owner, calendar: calendar };
-    //console.log(ownerInfo);
     res.render('owner-dashboard', {
       ownerInfo,
       loggedIn: true,
@@ -61,7 +60,6 @@ router.get('/dashboard/dog-schedule/:id', async (req, res) => {
       },
     });
     const dogSchedule = dogScheduleData.map((dog) => dog.get({ plain: true }));
-    console.log(dogSchedule.length);
     res.render('dog-schedule', { dogSchedule: dogSchedule });
   } catch (err) {
     console.log(err);
