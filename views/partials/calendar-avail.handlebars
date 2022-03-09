@@ -1,5 +1,5 @@
 <span>Select which dog you would like to make an appointnment for:</span>
-<select class='doggos'>
+<select id='doggos'>
   {{#each this.dogs}}
     <option data-dog='{{this.id}}'>{{this.dog_name}}</option>
   {{/each}}
@@ -20,7 +20,7 @@
         <td>{{this.walker.walker_name}}</td>
         <td>{{this.day}}</td>
         <td>{{this.time}}</td>
-        <td data-calendar='{{this.calendar.id}}'><button
+        <td data-calendar='{{this.id}}'><button
             class='schedule-dog'
           >Schedule Dog</button></td>
       </tr>
