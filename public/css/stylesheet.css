@@ -73,6 +73,10 @@
   border: 1px solid black;
 }
 
+.block p {
+  font-family: 'Shadows Into Light', Verdana, Geneva, Tahoma, sans-serif
+}
+
 /* Responsive for the hero image */
 @media screen and (max-width: 480px) {
   .hero {

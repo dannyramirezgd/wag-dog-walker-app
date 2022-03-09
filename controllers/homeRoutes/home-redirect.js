@@ -8,8 +8,6 @@ router.get('/', (req, res) => {
     res.redirect(`/owner/dashboard/${req.session.user_id}`);
     return;
   } else {
-    // res.redirect('/login');
-    // I main.handlebars have nav and footer. the login btn on website should redirect to login page.
     res.render('homepage');
   }
 });
