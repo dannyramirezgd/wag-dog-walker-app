@@ -1,48 +1,55 @@
-# Wag: Connecting Dogs with Their Walkers
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Wag the Dog Walking App
 
+## Description
+An application to connect dog owners with local walkers. Also provide users an opportunity to sign up as a walker to be hired by owners.
+
+## Table of Contents
+- [Wag the Dog Walking App](#wag-the-dog-walking-app)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Installation](#installation)
+  - [Built With](#built-with)
+  - [Usage](#usage)
+  - [Website](#website)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
+  - [License](#license)
+## Installation
+In order to install please enter the following code:
+```
+npm i
+```
+## Built With
+* JavaScript
+* HTML
+* CSS
+* ES6
+* Node
+* Handlebars
+* Express.js
+* Express-session
+* Bulma
+* MySQL
+* Sequelize
+
+## Usage
+
+Users must be familiar with all of the technologies listed above. The users must also have their own MySQL login and establish a .env file in order to run sequelize requests to the database. 
+
+## Website
 https://secure-savannah-19572.herokuapp.com/
-https://git.heroku.com/secure-savannah-19572.git
 
-git remote rm heroku
-git remote add heroku [the git address above]
+## Contributing
+If you are looking to contribute you can for example: 
+* Submit bugs and feature requests
 
-## Technology
 
-The following dependencies are used in production:
-- bcrypt: for hashing passwords
-- dotenv: for loading environment variables, to prevent publication of sensitive information
-- express: for building the web applications, specifically through router calls on the server side
-- express-session: for creating session middleware using express.js
-- handlebars: for building web templates
-- express-handlebars: for supporting partials and other features within express
-- mysql2: for accessing and querying MySQL
-- sequelize: for accessing and querying the database in JavaScript
-- connect-session-sequelize: for storing sessions in SQL via sequalize
+## Questions
+If you have any questions or comments you can reach out to me directly at: danny.ramirezgd@gmail.com or [dannyramirezgd](https://github.com/dannyramirezgd)
+  
+  ## License
+  Copyright (c) dannyramirezgd
 
-The following are used in development:
-- @faker-js/faker (referred to as faker). Listed in package.json as a production level dependency to avoid issues with ESLint
-- Prettier
-- Various ESLint packages
-
-## Models
-
-The database has four related tables.
-
-- Owners, who own the dogs
-- Walkers, who walk the Dogs
-- Dogs
-- Calendar, which stores weekly appointments between walkers and dogs
-
-Owners can have many dogs. Appointments in the Calendar store one walker and at most one dog (appointments without dogs attached are ones where the walker is available). Nothing prevents a Walker from walking more than one dog is the same time frame.
-
-## Mock Data
-
-There are two ways to mock data for this repo:
-
-### Faker.js
-
-The faker module simulates data for testing purposes, and can be found in the seeds file.
-
-### JSON files
-
-The above method is not very userful for mocking the login process for existing users, since the api routes return a hashed password. Instead, there are four files used to make post requests to Heroku for testing the external site.
+  This license made with MIT
+  
