@@ -51,7 +51,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-//POST api/owners creating a owner info and ingest into the db. I didn't specified req.body to key: value pair. will tweak as needed.
+//POST api/owners creating a owner info and ingest into the db. We didn't specify req.body to key: value pair.
 router.post('/', async (req, res) => {
   try {
     const newOwnerData = await Owner.create(req.body);
@@ -85,6 +85,11 @@ router.post('/login', async (req, res) => {
       res.status(400).json({ message: 'Invalid password. Try again' });
       return;
     }
+    /* We created two different logins to distinguish
+    between an owner and a walker. Both a walker and an owner
+    can have loggedIn as true but only a walker can have
+    walkerLogin as true
+    */
     req.session.save(() => {
       req.session.user_id = ownerUserNameData.id;
       req.session.loggedIn = true;

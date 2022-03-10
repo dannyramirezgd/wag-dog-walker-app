@@ -13,6 +13,8 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       const data = await response.json();
+      /*these timeouts ensured that the session was created before
+      handlebars could refresh the page and auto redirect back to the login page */
       setTimeout(() => {
         document.location.replace(`/walker/dashboard/${data.user.id}`);
       }, 500);

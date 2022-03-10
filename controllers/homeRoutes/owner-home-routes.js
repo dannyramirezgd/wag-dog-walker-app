@@ -17,6 +17,10 @@ router.get('/dashboard/:id', async (req, res) => {
         model: Walker,
       },
     });
+    /*in order to ensure all the information we needed we restructured the ownerInfo
+    object to include both owner and calendar data before we passed it into 
+    handlebars
+    */
     const calendar = calendarAvailable.map((data) => data.get({ plain: true }));
     const owner = singleOwnerData.get({ plain: true });
     const ownerInfo = { ...owner, calendar: calendar };
@@ -60,6 +64,10 @@ router.get('/dashboard/dog-schedule/:id', async (req, res) => {
       },
     });
     const dogSchedule = dogScheduleData.map((dog) => dog.get({ plain: true }));
+    /* we needed to set up dogSchedule as dogSchedule: dogSchedule 
+    because of some quirk with handlebars where it was rendering
+    an extra empty object
+    */
     res.render('dog-schedule', { dogSchedule: dogSchedule });
   } catch (err) {
     console.log(err);

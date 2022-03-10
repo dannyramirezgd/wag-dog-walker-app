@@ -23,6 +23,9 @@ async function addCalendarDate(event) {
 
 async function deleteCalendarDate(event) {
   event.preventDefault();
+
+  /*in order to capture the calendarId it was set to a 
+  data-* attribute and then fed into the API request*/
   const calendarId = this.parentNode.dataset.calendar;
 
   const response = await fetch(`/api/calendars/${calendarId}`, {
@@ -42,6 +45,7 @@ document
   .querySelector('.weekly-form')
   .addEventListener('submit', addCalendarDate);
 
+//forEach was necessary because of how many .delete-btn buttons there are
 document
   .querySelectorAll('.delete-btn')
   .forEach((element) => element.addEventListener('click', deleteCalendarDate));

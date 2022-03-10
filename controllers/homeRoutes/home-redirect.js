@@ -1,5 +1,9 @@
 const router = require('express').Router();
 
+/* To ensure the user couldn't get far without
+logging in we made sure to redirect unless
+certain session requirements were met.
+*/
 router.get('/', (req, res) => {
   if (req.session.walkerLogin) {
     res.redirect(`/walker/dashboard/${req.session.user_id}`);

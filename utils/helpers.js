@@ -1,3 +1,4 @@
+//this helper allowed all new users to have a default profile picture
 module.exports = {
   profile_pic: (data) => {
     if (data.profile_pic !== 'null') {

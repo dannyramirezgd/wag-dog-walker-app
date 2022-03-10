@@ -21,6 +21,10 @@ router.get('/dashboard/:id', async (req, res) => {
           model: Dog,
         },
       });
+      /*in order to ensure all the information we needed we restructured the walkerInfo
+    object to include both walker and calendar data before we passed it into 
+    handlebars
+    */
       const walker = singleWalkerData.get({ plain: true });
       const calendar = calendarRequest.map((calendar) =>
         calendar.get({ plain: true }),

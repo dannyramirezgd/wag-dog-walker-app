@@ -5,6 +5,7 @@ async function contactUsEmail(event) {
   const subject = document.querySelector('#contact-subject').value.trim();
   const message = document.querySelector('#contact-msg').value.trim();
 
+  //this form allows a user to send a message to a designated email
   const response = await fetch('/send', {
     method: 'POST',
     body: JSON.stringify({

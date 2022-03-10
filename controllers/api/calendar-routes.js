@@ -1,6 +1,10 @@
 const router = require('express').Router();
 const { Dog, Owner, Calendar, Walker } = require('../../models');
 
+/*because calendar routes are a through table for dog and walker 
+it's important to pull all data we can so that's why it looks
+like a lot of code initially
+*/
 router.get('/', async (req, res) => {
   try {
     const allCalendarData = await Calendar.findAll({
@@ -90,7 +94,10 @@ router.delete('/:id', async (req, res) => {
 
 router.get('/schedule', async (req, res) => {
   try {
-    //Select * from calendar where dog_id IS NULL;
+    /*when setting up an appointment we need to pull
+    only events that are without dogs so that's we
+    Select * from calendar where dog_id IS NULL;
+    */
     const calendarAvailable = await Calendar.findAll({
       where: { dog_id: null },
       include: {

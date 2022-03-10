@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 class Calendar extends Model {}
-
+//our through table to connect walker and dog
 Calendar.init(
   {
     id: {

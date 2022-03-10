@@ -3,6 +3,8 @@
     <div class='select is-hover is-link is-rounded is-normal'>
       <select id='doggos'>
         {{#each this.dogs}}
+        <!--By creating a data-* attribute here we are able to capture
+        the id more easily when making the API call later-->
           <option data-dog='{{this.id}}'>{{this.dog_name}}</option>
         {{/each}}
       </select>
@@ -28,6 +30,8 @@
         <td>{{this.walker.walker_name}}</td>
         <td>{{this.day}}</td>
         <td>{{this.time}}</td>
+        <!--By creating a data-* attribute here we are able to capture
+        the id more easily when making the API call later-->
         <td data-calendar='{{this.id}}'><button
             class='schedule-dog button is-info is-light is-small'
           >Schedule Dog</button></td>
