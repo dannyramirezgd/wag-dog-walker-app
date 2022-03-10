@@ -1,3 +1,7 @@
+.navbar-end {
+  margin-right: 30px;
+}
+
 .hero {
   background-size: cover;
   background-repeat: no-repeat;
@@ -74,7 +78,7 @@
 }
 
 .block p {
-  font-family: 'Shadows Into Light', Verdana, Geneva, Tahoma, sans-serif
+  font-family: 'Shadows Into Light', Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* Responsive for the hero image */
@@ -86,12 +90,57 @@
   .hero p {
     font-size: 1.8rem;
   }
+  .owner-content {
+    font-size: 1rem;
+  }
+  .walker-content {
+    font-size: 1rem;
+  }
+  .owner-sec {
+    margin-top: 200px;
+  }
+  .walker-sec {
+    margin-top: 200px;
+  }
+  .contact-blob {
+    margin-top: 200px;
+  }
+  .w-sign-up {
+    margin-top: 200px;
+  }
+  .sign-up {
+    margin-top: 200px;
+  }
+  .doggy {
+    margin-top: 200px;
+  }
 }
 
-@media screen and (min-width: 481px) and (max-width: 1023px) {
+@media screen and (min-width: 481px) and (max-width: 1024px) {
   .hero {
     background-image: url('/public/img/heroPhoto1.jpeg');
     background-repeat: no-repeat;
     font-size: 2rem;
+  }
+  .owner-sec {
+    margin-top: 200px;
+  }
+  .walker-sec {
+    margin-top: 200px;
+  }
+  .contact-us {
+    margin-top: 200px;
+  }
+  .contact-blob {
+    margin-top: 200px;
+  }
+  .w-sign-up {
+    margin-top: 200px;
+  }
+  .sign-up {
+    margin-top: 200px;
+  }
+  .doggy {
+    margin-top: 200px;
   }
 }
