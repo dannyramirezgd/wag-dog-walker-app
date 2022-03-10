@@ -12,6 +12,7 @@ An application to connect dog owners with local walkers. Also provide users an o
   - [Built With](#built-with)
   - [Usage](#usage)
   - [Website](#website)
+  - [Screenshot](#screenshot)
   - [Contributing](#contributing)
   - [Questions](#questions)
   - [License](#license)
@@ -39,6 +40,9 @@ Users must be familiar with all of the technologies listed above. The users must
 
 ## Website
 https://secure-savannah-19572.herokuapp.com/
+
+## Screenshot
+![screenshot](https://github.com/dannyramirezgd/wag-dog-walking-app/blob/screencapture-secure-savannah-19572-herokuapp-2022-03-10-08_39_54.png)
 
 ## Contributing
 If you are looking to contribute you can for example: 
